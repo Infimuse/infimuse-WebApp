@@ -15,6 +15,7 @@ function Header() {
         <Image
           src={logo}
           height={80}
+          alt={"logo"}
           width={80}
           objectFit="contain"
           objectPosition="left"
