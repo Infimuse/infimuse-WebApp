@@ -39,7 +39,7 @@ const HeroBanner = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-white rounded-2xl">
+    <div className="relative w-full h-screen rounded-2xl overflow-hidden"> {/* Add overflow-hidden */}
       <Image
         src={banners[currentBanner].image}
         alt="Background"
@@ -49,7 +49,7 @@ const HeroBanner = () => {
         className="rounded-2xl"
       />
       <div className="absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white sm:px-6 lg:px-20  ">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6 md:px-20">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{banners[currentBanner].title}</h1>
         <p className="text-lg sm:text-xl md:text-2xl mb-6">{banners[currentBanner].subtitle}</p>
         <button className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-6 rounded">

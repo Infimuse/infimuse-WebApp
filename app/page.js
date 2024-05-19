@@ -100,7 +100,7 @@ const HomePage = () => {
       <Navbar />
       <SubNavbar/>
       <Hero/>
-      {/* <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl font-bold mb-8">Past experiences</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {experiences.map((experience, index) => (
@@ -114,7 +114,7 @@ const HomePage = () => {
             />
           ))}
         </div>
-      </div> */}
+      </div>
       <Footer/>
     </div>
   );
