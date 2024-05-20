@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaSearch, FaBars, FaUserCircle, FaGlobe } from 'react-icons/fa';
