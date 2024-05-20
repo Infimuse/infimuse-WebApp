@@ -4,10 +4,13 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaSearch, FaBars, FaUserCircle, FaGlobe } from 'react-icons/fa';
 import logo from '@/public/assets/logo.png';
-import SignIn from '@/components/Signin';
+import SignIn from './Signin';
+import SignUp from './SignUp';
+import { ToastContainer } from 'react-toastify';
 
 function Header() {
   const [showSignIn, setShowSignIn] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
@@ -45,8 +48,16 @@ function Header() {
         >
           Sign In
         </button>
+        <button
+          onClick={() => setShowSignUp(true)}
+          className="bg-green-500 text-white py-1 px-3 rounded-lg hover:bg-green-600 transition duration-300"
+        >
+          Sign Up
+        </button>
       </div>
       {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
+      {showSignUp && <SignUp onClose={() => setShowSignUp(false)} />}
+      <ToastContainer />
     </header>
   );
 }
