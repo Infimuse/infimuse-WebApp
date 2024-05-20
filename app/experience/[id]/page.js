@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import { HeartIcon, GiftIcon, BookmarkIcon, UsersIcon } from '@heroicons/react/24/outline';
 import Footer from '@/components/Footer';
+import Download from '@/components/Download';
 
 const learningExperiences = [
   {
@@ -185,12 +186,7 @@ export default function ExperienceDetail({ params }) {
           </div>
         </div>
       </div>
-      <div className="bg-gray-800 py-20 rounded-lg  text-white p-4 text-center">
-        <p className="mb-2">Download the Host App from Play Store</p>
-        <button className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">
-          Download Now
-        </button>
-      </div>
+      <Download/>
       <Footer/>
     </div>
   );

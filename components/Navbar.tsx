@@ -1,13 +1,12 @@
-import Image from "next/image";
-// import {
-//   SearchIcon,
-//   MenuIcon,
-//   GlobeAltIcon,
-//   UserCircleIcon,
-// } from "@heroicons/react/solid";
-import logo from "@/public/assets/logo.png";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { FaSearch, FaBars, FaUserCircle, FaGlobe } from 'react-icons/fa';
+import logo from '@/public/assets/logo.png';
+import SignIn from '@/components/Signin';
 
 function Header() {
+  const [showSignIn, setShowSignIn] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
       {/* left */}
@@ -28,17 +27,24 @@ function Header() {
           type="text"
           placeholder="Start your search"
         />
-        {/* <SearchIcon className="hidden md:inline-flex h-8 bg-[#A72C76] text-white rounded-full p-2 cursor-pointer md:mx-2" /> */}
+        <FaSearch className="hidden md:inline-flex h-8 bg-[#A72C76] text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
       {/* right */}
       <div className="flex items-center justify-end space-x-4 text-gray-500">
         <p className="hidden md:inline">Become a host</p>
-        {/* <GlobeAltIcon className="h-6 cursor-pointer" /> */}
+        <FaGlobe className="h-6 cursor-pointer" />
         <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
-          {/* <MenuIcon className="h-6" /> */}
-          {/* <UserCircleIcon className="h-6" /> */}
+          <FaBars className="h-6" />
+          <FaUserCircle className="h-6" />
         </div>
+        <button
+          onClick={() => setShowSignIn(true)}
+          className="bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600 transition duration-300"
+        >
+          Sign In
+        </button>
       </div>
+      {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
     </header>
   );
 }
