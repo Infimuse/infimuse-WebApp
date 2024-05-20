@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGooglePlay } from "react-icons/fa";
+// import { FaGooglePlay } from "react-icons/fa";
 import Image from 'next/image';
 import appImage from '@/public/assets/photo1716214382.jpeg'; // Replace with actual image path
 
