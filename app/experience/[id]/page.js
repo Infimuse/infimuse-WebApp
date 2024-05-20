@@ -180,7 +180,7 @@ export default function ExperienceDetail({ params }) {
               <li>Reviews ({experience.reviews})</li>
               <li>School Info</li>
               <li>Give as a Gift</li>
-              <li>Book as Private Event</li>
+              {/* <li>Book as Private Event</li> */}
             </ul>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import SubNavbar from '@/components/SubNavbar';
-import SubNavbar2 from '@/components/SubNavbar2';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Card from '@/components/Card';
@@ -14,8 +13,7 @@ const experiences = [
     host: 'Atelier Sucré',
     status: 'Upcoming',
     category: 'Learn a Skill',
-    price: '$100'
-
+    price: '$100',
   },
   {
     id: '2',
@@ -24,8 +22,7 @@ const experiences = [
     host: 'CocuSocial Cooking Classes',
     status: 'Upcoming',
     category: 'Unique Experiences',
-    price: '$100'
-
+    price: '$100',
   },
   {
     id: '3',
@@ -34,8 +31,7 @@ const experiences = [
     host: 'Ceramics on 10th',
     status: 'Upcoming',
     category: 'Learn a Skill',
-    price: '$100'
-
+    price: '$100',
   },
   {
     id: '4',
@@ -44,7 +40,7 @@ const experiences = [
     host: 'NY Cake Academy',
     status: 'Upcoming',
     category: 'Practice',
-    price: '$100'
+    price: '$100',
   },
   {
     id: '5',
@@ -53,8 +49,7 @@ const experiences = [
     host: 'Chef Ramsey',
     status: 'Sold out',
     category: 'Unique Experiences',
-    price: '$100'
-
+    price: '$100',
   },
   {
     id: '6',
@@ -63,8 +58,7 @@ const experiences = [
     host: 'Photographer Alex',
     status: 'Upcoming',
     category: 'Learn a Skill',
-    price: '$100'
-
+    price: '$100',
   },
   {
     id: '7',
@@ -73,8 +67,7 @@ const experiences = [
     host: 'Yoga Studio',
     status: 'Upcoming',
     category: 'Practice',
-    price: '$100'
-
+    price: '$100',
   },
 ];
 
@@ -86,12 +79,11 @@ const HomePage = () => {
   };
 
   return (
-    <div className='bg-white'>
+    <div className="bg-white">
       <Navbar />
       <SubNavbar />
-      <SubNavbar2 />
       <Hero />
-      <div className="container mx-auto my-8 text-black">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <h2 className="text-2xl font-bold mb-4">Popular Categories</h2>
         <div className="flex flex-wrap gap-2 mb-8">
           {[
@@ -100,9 +92,12 @@ const HomePage = () => {
             'Floral Design', 'Glass Blowing', 'Improv', 'Jewelry Making',
             'Language', 'Mixology', 'Paint & Sip', 'Painting', 'Perfume Making',
             'Photography', 'Pottery', 'Coding', 'Public Speaking', 'Sewing',
-            'Tech', 'Video Editing', 'Wine', 'Woodworking', 'Writing'
+            'Tech', 'Video Editing', 'Wine', 'Woodworking', 'Writing',
           ].map((category) => (
-            <span key={category} className="px-4 py-2 bg-gray-200 rounded-full cursor-pointer">
+            <span
+              key={category}
+              className="px-4 py-2 bg-gray-200 rounded-full cursor-pointer text-sm sm:text-base"
+            >
               {category}
             </span>
           ))}
