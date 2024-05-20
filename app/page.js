@@ -4,6 +4,7 @@ import SubNavbar from '@/components/SubNavbar';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Card from '@/components/Card';
+import Download from '@/components/Download';
 
 const experiences = [
   {
@@ -121,6 +122,7 @@ const HomePage = () => {
           {renderCards('Practice')}
         </div>
       </div>
+      <Download/>
       <Footer />
     </div>
   );
