@@ -1,55 +1,52 @@
+"use client";
+
+import { useState } from 'react';
 import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import { HeartIcon, GiftIcon, BookmarkIcon, UsersIcon } from '@heroicons/react/24/outline';
+import Footer from '@/components/Footer';
 
 const learningExperiences = [
   {
     id: '1',
-    image: '/assets/image.jpeg',
-    title: 'Introduction to Boxing',
-    host: 'Coach Jubilee',
+    image: '/assets/cooking@1x.jpg',
+    title: 'Bake Your Own French Croissant',
+    host: 'Atelier Sucré',
     capacity: 20,
     ageGroup: '16+',
-    price: '$50',
-    venue: 'Downtown Gym',
-    description: 'Learn the basics of boxing in this introductory class, perfect for beginners.',
-    amenities: ['Boxing Gloves Provided', 'Free Parking', 'Air Conditioning', 'Water Station'],
+    price: '$95',
+    venue: 'Atelier Sucré Kitchen',
+    description: 'Learn the foundations of cake decorating and several piping techniques, including shells, stars, zig-zag and rosettes. The first ½ of this lesson will concentrate on mastering basic skills and proper technique. The second part of the class will focus on applying the skills you learned to create a professional looking textured buttercream cake. Filling, frosting piping, we will do it all.',
+    amenities: ['Ingredients Provided', 'Recipe Book', 'Certificate of Completion'],
     mapImage: '/assets/map.png',
-  },
-  {
-    id: '2',
-    image: '/assets/class2.jpg',
-    title: 'Advanced Cooking Techniques',
-    host: 'Chef Ramsey',
-    capacity: 15,
-    ageGroup: '18+',
-    price: '$100',
-    venue: 'Culinary Institute',
-    description: 'Enhance your cooking skills with advanced techniques taught by a professional chef.',
-    amenities: ['Ingredients Provided', 'Kitchen Equipment', 'Recipe Book', 'Certificate of Completion'],
-    mapImage: '/assets/map2.png',
-  },
-  {
-    id: '3',
-    image: '/assets/class3.jpg',
-    title: 'Photography Masterclass',
-    host: 'Photographer Alex',
-    capacity: 10,
-    ageGroup: '16+',
-    price: '$75',
-    venue: 'City Park',
-    description: 'Master the art of photography in this hands-on masterclass with a professional photographer.',
-    amenities: ['Camera Rentals Available', 'Outdoor Venue', 'Editing Workshop', 'Portfolio Review'],
-    mapImage: '/assets/map3.png',
+    dates: [
+      { date: 'Thu, May 30th, 4:30-7pm EDT', seatsLeft: 11 },
+      { date: 'Sat, Jun 1st, 11am-1:30pm EDT', seatsLeft: 12 },
+      { date: 'Fri, Jun 14th, 10am-1:30pm EDT', seatsLeft: 12 },
+      { date: 'Fri, Jun 14th, 2-4:30pm EDT', seatsLeft: 12 },
+    ],
+    reviews: 457,
+    rating: 4.6,
+    location: '118 W 22nd St, New York, NY',
+    ageLimit: '12 and older',
+    startDate: 'May 30th, 2023',
+    time: '4:30-7pm EDT',
+    avgSessionDuration: '2.5 hours',
+    numOfClasses: 4,
+    attending: 8,
+    hostType: 'Professional',
+    profilePicture: 'https://randomuser.me/api/portraits/men/75.jpg',
   },
   // Add more learning experiences as needed
 ];
 
 const getLearningExperience = (id) => {
-  return learningExperiences.find(exp => exp.id === id);
+  return learningExperiences.find((exp) => exp.id === id);
 };
 
 export default function ExperienceDetail({ params }) {
+  const [activeTab, setActiveTab] = useState('description');
   const experience = getLearningExperience(params.id);
 
   if (!experience) {
@@ -59,46 +56,142 @@ export default function ExperienceDetail({ params }) {
   return (
     <div className="bg-gray-100 text-gray-800 min-h-screen">
       <Navbar />
-      <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold mb-4 text-center">{experience.title}</h1>
-        <p className="text-lg mb-2 text-center">Hosted by {experience.host}</p>
-        <div className="relative w-full h-96 mb-8">
-          <Image src={experience.image} alt={experience.title} layout="fill" objectFit="cover" className="rounded-lg shadow-lg" />
+      <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row">
+        <div className="lg:w-3/4">
+          <h1 className="text-3xl font-bold mb-4">{experience.title}</h1>
+          <p className="text-lg mb-2">Hosted by {experience.host}</p>
+          <div className="relative w-full h-96 mb-8">
+            <Image src={experience.image} alt={experience.title} layout="fill" objectFit="cover" className="rounded-lg shadow-lg" />
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Class Information</h2>
+            <p><strong>Start Date:</strong> {experience.startDate}</p>
+            <p><strong>Time:</strong> {experience.time}</p>
+            <p><strong>Avg Session Duration:</strong> {experience.avgSessionDuration}</p>
+            <p><strong>Number of Classes:</strong> {experience.numOfClasses}</p>
+            <p><strong>Age Group:</strong> {experience.ageGroup}</p>
+            <p><strong>Location:</strong> {experience.location}</p>
+            <p><strong>Attending:</strong> {experience.attending} out of {experience.capacity} slots booked</p>
+            <p><strong>Host Type:</strong> {experience.hostType}</p>
+            <div className="flex items-center mb-2">
+              <p><strong>Avg Rating:</strong></p>
+              <div className="text-yellow-500 flex items-center ml-2">
+                {'⭐'.repeat(Math.round(experience.rating))}
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Start Dates ({experience.dates.length})</h2>
+            <div className="grid grid-cols-1 gap-4">
+              {experience.dates.map((date, index) => (
+                <div key={index} className="flex justify-between items-center border p-4 rounded-lg">
+                  <span>{date.date}</span>
+                  <div className="flex items-center space-x-4">
+                    <span className="text-green-600">{date.seatsLeft} seats left</span>
+                    <button className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Book</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Class Description</h2>
+            <p className="mb-4">{experience.description}</p>
+            <h3 className="text-lg font-semibold mb-2">You Will Learn:</h3>
+            <ul className="list-disc list-inside mb-4">
+              <li>Learn how to Crumb Coat</li>
+              <li>Work with American Buttercream</li>
+              <li>Learn various piping techniques including; shells, stars, zig-zags, ruffles & rosettes</li>
+              <li>Work with multiple piping tips</li>
+              <li>Learn how to apply these techniques to your cake.</li>
+            </ul>
+            <p className="text-gray-600 italic">All supplies and materials included, classes are hands-on, interactive experiences. So, please dress accordingly. We recommend wearing casual clothing that you won’t mind getting a little sugar on, and flat comfortable shoes. Open toed shoes and sandals are not recommended as this is a safety concern when working within a kitchen. Long hair should be tied back.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Reviews ({experience.reviews})</h2>
+            <div className="text-yellow-500 flex items-center mb-2">
+              {'⭐'.repeat(Math.round(experience.rating))}
+            </div>
+            <p>Lots of fun and technically very informative and easy to learn. Lisa is an amazing instructor! I highly recommend this class to anyone interested in cake decorating and perfecting their craft.</p>
+            <p className="text-right font-semibold mt-2">- KERRY H.</p>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Meet the Staff</h2>
+            <div className="flex items-center">
+              <Image src={experience.profilePicture} alt="Staff" width={75} height={75} className="rounded-full" />
+              <div className="ml-4">
+                <p className="text-lg font-bold">{experience.host}</p>
+                <div className="text-yellow-500 flex items-center">
+                  {'⭐'.repeat(Math.round(experience.rating))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          <div className="bg-white rounded-lg shadow-md p-4">
-            <p className="text-sm font-medium">Capacity</p>
-            <p className="text-lg">{experience.capacity} people</p>
+        <div className="lg:w-1/4 lg:pl-8">
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <button className="w-full bg-red-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-red-600 transition duration-300 mb-4">
+              Book Now
+            </button>
+            <button className="w-full bg-gray-100 text-gray-700 font-semibold py-3 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 mb-4">
+              <GiftIcon className="inline h-5 w-5 mr-2" /> Give as a Gift
+            </button>
+            <button className="w-full bg-gray-100 text-gray-700 font-semibold py-3 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 mb-4">
+              <BookmarkIcon className="inline h-5 w-5 mr-2" /> Save to Wishlist
+            </button>
+            <div className="text-center text-gray-500 text-sm">
+              1139 people wishlisted
+            </div>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-4">
-            <p className="text-sm font-medium">Age Group</p>
-            <p className="text-lg">{experience.ageGroup}</p>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-xl font-semibold mb-4">Price</h2>
+            <p className="text-2xl font-bold mb-2">{experience.price}</p>
+            <ul className="list-disc list-inside">
+              <li>All levels</li>
+              <li>Age Limit: {experience.ageLimit}</li>
+              <li>Earn 10% Rewards</li>
+              <li>Price Lock</li>
+            </ul>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-4">
-            <p className="text-sm font-medium">Price</p>
-            <p className="text-lg">{experience.price}</p>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-xl font-semibold mb-4">Group Tickets</h2>
+            <p className="text-lg mb-2">Bring your friends and save!</p>
+            <ul className="list-disc list-inside mb-4">
+              <li>Group of 5: 10% discount</li>
+              <li>Group of 10: 15% discount</li>
+              <li>Group of 20: 20% discount</li>
+            </ul>
+            <button className="w-full bg-blue-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+              <UsersIcon className="inline h-5 w-5 mr-2" /> Book Group Tickets
+            </button>
           </div>
-          <div className="bg-white rounded-lg shadow-md p-4">
-            <p className="text-sm font-medium">Venue</p>
-            <p className="text-lg">{experience.venue}</p>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-xl font-semibold mb-4">Location</h2>
+            <p>{experience.location}</p>
           </div>
-        </div>
-        <p className="mb-4">{experience.description}</p>
-        <h2 className="text-xl font-semibold mb-2">Amenities</h2>
-        <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
-          {experience.amenities.map((amenity, index) => (
-            <li key={index} className="bg-white rounded-lg shadow-md p-4">{amenity}</li>
-          ))}
-        </ul>
-        <div className="relative w-full h-64 mb-8">
-          <Image src={experience.mapImage} alt="Map" layout="fill" objectFit="cover" className="rounded-lg shadow-lg" />
-        </div>
-        <div className="text-center">
-          <button className="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-            Book Now
-          </button>
+          <div className="relative w-full h-64 mb-8">
+            <Image src={experience.mapImage} alt="Map" layout="fill" objectFit="cover" className="rounded-lg shadow-lg" />
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 className="text-xl font-semibold mb-4">On This Page</h2>
+            <ul className="list-disc list-inside">
+              <li>Start Dates ({experience.dates.length})</li>
+              <li>Class Description</li>
+              <li>Reviews ({experience.reviews})</li>
+              <li>School Info</li>
+              <li>Give as a Gift</li>
+              <li>Book as Private Event</li>
+            </ul>
+          </div>
         </div>
       </div>
+      <div className="bg-gray-800 py-20 rounded-lg  text-white p-4 text-center">
+        <p className="mb-2">Download the Host App from Play Store</p>
+        <button className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">
+          Download Now
+        </button>
+      </div>
+      <Footer/>
     </div>
   );
 }

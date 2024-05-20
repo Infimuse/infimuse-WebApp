@@ -1,10 +1,10 @@
 import Image from "next/image";
-import {
-  SearchIcon,
-  MenuIcon,
-  GlobeAltIcon,
-  UserCircleIcon,
-} from "@heroicons/react/solid";
+// import {
+//   SearchIcon,
+//   MenuIcon,
+//   GlobeAltIcon,
+//   UserCircleIcon,
+// } from "@heroicons/react/solid";
 import logo from "@/public/assets/logo.png";
 
 function Header() {
@@ -28,15 +28,15 @@ function Header() {
           type="text"
           placeholder="Start your search"
         />
-        <SearchIcon className="hidden md:inline-flex h-8 bg-[#A72C76] text-white rounded-full p-2 cursor-pointer md:mx-2" />
+        {/* <SearchIcon className="hidden md:inline-flex h-8 bg-[#A72C76] text-white rounded-full p-2 cursor-pointer md:mx-2" /> */}
       </div>
       {/* right */}
       <div className="flex items-center justify-end space-x-4 text-gray-500">
         <p className="hidden md:inline">Become a host</p>
-        <GlobeAltIcon className="h-6 cursor-pointer" />
+        {/* <GlobeAltIcon className="h-6 cursor-pointer" /> */}
         <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
-          <MenuIcon className="h-6" />
-          <UserCircleIcon className="h-6" />
+          {/* <MenuIcon className="h-6" /> */}
+          {/* <UserCircleIcon className="h-6" /> */}
         </div>
       </div>
     </header>

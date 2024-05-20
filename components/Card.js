@@ -2,17 +2,18 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const Card = ({ id, image, title, host, status }) => {
+const Card = ({ id, image, title, host, status, price }) => {
   return (
     <Link href={`/experience/${id}`} className="block bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="relative w-full h-56">
-          <Image src={image} alt={title} layout="fill" objectFit="cover" />
-        </div>
-        <div className="p-4">
-          <h3 className="text-lg font-semibold">{title}</h3>
-          <p className="text-gray-500">Hosted by {host}</p>
-          <p className="text-red-500">{status}</p>
-        </div>
+      <div className="relative w-full h-56">
+        <Image src={image} alt={title} layout="fill" objectFit="cover" />
+      </div>
+      <div className="p-4">
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <p className="text-gray-500">Hosted by {host}</p>
+        <p className={`text-${status === 'Sold out' ? 'red' : 'green'}-500`}>{status}</p>
+        <p className="text-gray-500">{price}</p>
+      </div>
     </Link>
   );
 };
