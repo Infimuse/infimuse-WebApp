@@ -1,5 +1,5 @@
 import React from "react";
-// import { FaGooglePlay } from "react-icons/fa";
+import { FaGooglePlay } from "react-icons/fa";
 import Image from 'next/image';
 import appImage from '@/public/assets/photo1716214382.jpeg'; // Replace with actual image path
 
@@ -15,7 +15,7 @@ function Download() {
             tools to enhance your event management process.
           </p>
           <button className="flex items-center bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300 mx-auto md:mx-0">
-            <FaGooglePlay className="mr-2" />
+            {/* <FaGooglePlay className="mr-2" /> */}
             Download Now
           </button>
         </div>
