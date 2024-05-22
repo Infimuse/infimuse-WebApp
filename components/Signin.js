@@ -1,32 +1,32 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { login, reset } from '@/redux/slices/authSlice';
-import { toast } from 'react-toastify';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { login, reset } from '@/redux/slices/authSlice';
+// import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function SignIn({ onClose }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const dispatch = useDispatch();
-  const { isError, isSuccess, message } = useSelector((state) => state.auth);
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
+  // const dispatch = useDispatch();
+  // const { isError, isSuccess, message } = useSelector((state) => state.auth);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(login({ email, password }));
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   dispatch(login({ email, password }));
+  // };
 
-  React.useEffect(() => {
-    if (isError) {
-      toast.error(message);
-      dispatch(reset());
-    }
+  // React.useEffect(() => {
+  //   if (isError) {
+  //     toast.error(message);
+  //     dispatch(reset());
+  //   }
 
-    if (isSuccess) {
-      toast.success('Login successful');
-      dispatch(reset());
-      onClose();
-    }
-  }, [isError, isSuccess, message, dispatch, onClose]);
+  //   if (isSuccess) {
+  //     toast.success('Login successful');
+  //     dispatch(reset());
+  //     onClose();
+  //   }
+  // }, [isError, isSuccess, message, dispatch, onClose]);
 
   const handleClickOutside = (e) => {
     if (e.target.id === 'sign-in-modal') {
@@ -42,14 +42,16 @@ function SignIn({ onClose }) {
     >
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative">
         <h2 className="text-2xl font-bold mb-4">Sign In</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        {/* <form onSubmit={handleSubmit} className="space-y-4"> */}
+        <form className="space-y-4">
+
           <div>
             <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              // value={email}
+              // onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -58,8 +60,8 @@ function SignIn({ onClose }) {
             <input
               type="password"
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              // value={password}
+              // onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>

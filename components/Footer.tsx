@@ -9,7 +9,7 @@ import logo from "@/public/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+    <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-white">
       {/* Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
         <div className="col-span-full hidden lg:col-span-1 lg:block">
@@ -158,9 +158,9 @@ const Footer = () => {
             {/* End Language Dropdown */}
 
             <div className="space-x-4 text-sm ms-4">
-              <a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800  " href="#">Terms</a>
-              <a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800  " href="#">Privacy</a>
-              <a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800  " href="#">Status</a>
+              <a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800  " href="/T&c">Terms</a>
+              <a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800  " href="/Privacy">Privacy</a>
+              <a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800  " href="/cancellation">Cancellation Policy</a>
             </div>
           </div>
 

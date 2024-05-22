@@ -8,7 +8,7 @@ import SignIn from './Signin';
 import SignUp from './SignUp';
 import { ToastContainer } from 'react-toastify';
 
-function Header() {
+const Header = () => {
   const [showSignIn, setShowSignIn] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
 
@@ -43,7 +43,7 @@ function Header() {
           <FaUserCircle className="h-6" />
         </div>
         <button
-          onClick={() => setShowSignIn(true)}
+          // onClick={() => setShowSignIn(true)}
           className="bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600 transition duration-300"
         >
           Sign In

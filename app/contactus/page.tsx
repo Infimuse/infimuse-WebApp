@@ -1,18 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Metadata } from "next";
+"use client"
+import React from 'react';
+import SubNavbar from '@/components/SubNavbar';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
-export const metadata: Metadata = {
-  title: "Contact Us - Infimuse",
-  openGraph: {
-    title: "Contact Us - Infimuse",
-  },
-  twitter: {
-    title: "Contact Us - Infimuse"
-  }
-}
 
 function page() {
   return (
+    <>
+    <Navbar/>
+    {/* <SubNavbar /> */}
     <div className="max-w-[85rem] bg-white px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto ">
       <div className="max-w-2xl lg:max-w-5xl mx-auto py-8">
         <div className="text-center">
@@ -40,8 +38,7 @@ function page() {
                       name="hs-firstname-contacts-1"
                       id="hs-firstname-contacts-1"
                       className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm disabled:opacity-50 disabled:pointer-events-none border  "
-                      placeholder="First Name"
-                    />
+                      placeholder="First Name" />
                   </div>
 
                   <div>
@@ -51,8 +48,7 @@ function page() {
                       name="hs-lastname-contacts-1"
                       id="hs-lastname-contacts-1"
                       className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm disabled:opacity-50 disabled:pointer-events-none border"
-                      placeholder="Last Name"
-                    />
+                      placeholder="Last Name" />
                   </div>
                 </div>
 
@@ -63,8 +59,7 @@ function page() {
                     name="hs-email-contacts-1"
                     id="hs-email-contacts-1"
                     className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm  disabled:opacity-50 disabled:pointer-events-none border"
-                    placeholder="Email"
-                  />
+                    placeholder="Email" />
                 </div>
 
                 <div>
@@ -74,8 +69,7 @@ function page() {
                     name="hs-phone-number-1"
                     id="hs-phone-number-1"
                     className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm  disabled:opacity-50 disabled:pointer-events-none border"
-                    placeholder="Phone Number"
-                  />
+                    placeholder="Phone Number" />
                 </div>
 
                 <div>
@@ -170,39 +164,11 @@ function page() {
                       fillRule="evenodd"
                       clipRule="evenodd"
                       d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z"
-                      fill="currentColor"
-                    />
+                      fill="currentColor" />
                   </svg>
                 </a>
               </div>
             </div>
-
-            {/* <div className=" flex gap-x-7 py-6">
-              <svg
-                className="flex-shrink-0 w-6 h-6 mt-1.5 text-gray-800"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m7 11 2-2-2-2" />
-                <path d="M11 13h4" />
-                <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-              </svg>
-              {/* <div className="grow">
-                <a href="https://gtahidiapi.developer.azure-api.net">
-                <h3 className="font-semibold text-gray-800 ">Developer APIs</h3>
-                </a>
-                <p className="mt-1 text-sm text-gray-500">
-                  Check out our development quickstart guide.
-                </p>
-              </div> 
-            </div> */}
 
             <div className=" flex gap-x-7 py-6">
               <svg
@@ -238,7 +204,9 @@ function page() {
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </div></>
+
   );
 }
 
