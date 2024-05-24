@@ -4,6 +4,7 @@ import SubNavbar from '@/components/SubNavbar';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Card from '@/components/Card';
+import SubNavbar2 from '@/components/SubNavbar2';
 import Download from '@/components/Download';
 
 const experiences = [
@@ -81,6 +82,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-white">
+      <SubNavbar2/>
       <Navbar />
       <SubNavbar />
       <Hero />

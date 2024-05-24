@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Card.js", "app/experience/[id]/page.js", "app/page.js", "components/Navbar.js", "components/Signin.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Card.js", "app/experience/[id]/page.js", "app/page.js", "components/Navbar.js", "components/Signin.js", "components/SubNavbar.js"],
   "exclude": ["node_modules"]
 }

@@ -40,7 +40,7 @@ function SignIn({ onClose }) {
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
       onClick={handleClickOutside}
     >
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative">
+      <div className="bg-white p-8 rounded-lg text-black shadow-lg w-full max-w-md relative">
         <h2 className="text-2xl font-bold mb-4">Sign In</h2>
         {/* <form onSubmit={handleSubmit} className="space-y-4"> */}
         <form className="space-y-4">
