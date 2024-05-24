@@ -34,8 +34,8 @@ const SubNavbar = () => {
 
   return (
     <div className="bg-white shadow-md py-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex space-x-8 overflow-x-auto hide-scroll-bar">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-4">
+        <div className="relative flex space-x-8 overflow-x-auto hide-scroll-bar p-2">
           {categories.map((category, index) => (
             <div
               key={index}
@@ -55,9 +55,7 @@ const SubNavbar = () => {
               )}
             </div>
           ))}
-          <div className="flex flex-col items-center cursor-pointer hover:text-pink-600 transition duration-150 ease-in-out">
-            <span className="text-2xl mb-2">➡️</span>
-          </div>
+          
         </div>
       </div>
     </div>
