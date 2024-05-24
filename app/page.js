@@ -94,8 +94,6 @@ const HomePage = () => {
             'Certificate Programs', 'Cooking', 'Craft', 'Design', 'Drawing',
             'Floral Design', 'Glass Blowing', 'Improv', 'Jewelry Making',
             'Language', 'Mixology', 'Paint & Sip', 'Painting', 'Perfume Making',
-            'Photography', 'Pottery', 'Coding', 'Public Speaking', 'Sewing',
-            'Tech', 'Video Editing', 'Wine', 'Woodworking', 'Writing',
           ].map((category) => (
             <span
               key={category}
@@ -108,7 +106,7 @@ const HomePage = () => {
         <h2 className="text-2xl font-bold mb-4">Explore (All upcoming 10 days)</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {experiences.map((experience) => (
-            <Card key={experience.id} {...experience} />
+            <Card key={experience.id} {...experience} className="h-10" />
           ))}
         </div>
         <h2 className="text-2xl font-bold mt-8 mb-4">Unique Experiences</h2>
@@ -124,7 +122,7 @@ const HomePage = () => {
           {renderCards('Practice')}
         </div>
       </div>
-      <Download/>
+      <Download />
       <Footer />
     </div>
   );

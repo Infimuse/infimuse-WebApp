@@ -6,7 +6,7 @@ import logo from '@/public/assets/logo.png';
 import SignIn from './Signin';
 import SignUp from './SignUp';
 import { ToastContainer } from 'react-toastify';
-import DatePicker from './DatePicker';
+import DatePickerComponent from './DatePicker';
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -33,8 +33,8 @@ const Header = () => {
       </div>
 
       {/* Middle search */}
-      <div className=" w-full">
-        <DatePicker />
+      <div className="flex items-center justify-center w-full">
+        <DatePickerComponent />
       </div>
 
       {/* Right */}
