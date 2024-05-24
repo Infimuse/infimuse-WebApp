@@ -11,7 +11,7 @@ const host = {
   pets: 'My two dogs',
   language: 'English',
   location: 'Karen, Ke',
-  bio: 'Kevin Hart is a renowned comedian and businessman with a passion for hosting and entertaining. He loves working and is obsessed with stand-up comedy and comedians in general.',
+  bio: 'Kevin Otieno is a renowned comedian and businessman with a passion for hosting and entertaining. He loves working and is obsessed with stand-up comedy and comedians in general.',
   profilePicture: 'https://randomuser.me/api/portraits/men/89.jpg', // Update with actual image path
   listings: [
     {
