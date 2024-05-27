@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 const DatePickerComponent = () => {
   const [startDate, setStartDate] = useState(null);
@@ -18,10 +20,11 @@ const DatePickerComponent = () => {
         <button className="px-4 py-2 mx-1 rounded-md bg-gray-200 hover:bg-gray-300 whitespace-nowrap">Next Week</button>
         <div className="relative mx-1">
           <button
-            className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 whitespace-nowrap"
+            className="flex items-center px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 whitespace-nowrap"
             onClick={() => setShowDatePicker(!showDatePicker)}
           >
-            Select a date
+            <span>Select a date</span>
+            <FontAwesomeIcon icon={faCalendarAlt} className="ml-2" />
           </button>
           {showDatePicker && (
             <div className="absolute top-12 left-0 z-10 bg-white rounded-lg shadow-lg">

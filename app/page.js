@@ -36,6 +36,24 @@ const experiences = [
     price: '$100',
   },
   {
+    id: '8',
+    image: '/assets/image.jpeg',
+    title: 'Pottery Wheel Basics',
+    host: 'Ceramics on 10th',
+    status: 'Upcoming',
+    category: 'Classes',
+    price: '$100',
+  },
+  {
+    id: '9',
+    image: '/assets/image.jpeg',
+    title: 'Pottery Wheel Basics',
+    host: 'Ceramics on 10th',
+    status: 'Upcoming',
+    category: 'Classes',
+    price: '$100',
+  },
+  {
     id: '4',
     image: '/assets/image.jpeg',
     title: 'Cake Decorating 101',
@@ -110,9 +128,14 @@ const HomePage = () => {
             <Card key={experience.id} {...experience} className="h-10" />
           ))}
         </div>
+        
         <h2 className="text-2xl font-bold mt-8 mb-4">Unique Experiences</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {renderCards('Unique Experiences')}
+        </div>
+        <h2 className="text-2xl font-bold mt-8 mb-4">Classes </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {renderCards('Classes')}
         </div>
         <h2 className="text-2xl font-bold mt-8 mb-4">Learn a Skill (Upcoming Workshops)</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

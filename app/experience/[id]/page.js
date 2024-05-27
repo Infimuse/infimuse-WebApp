@@ -40,6 +40,34 @@ const learningExperiences = [
     profilePicture: 'https://randomuser.me/api/portraits/men/75.jpg',
   },
   // Add more learning experiences as needed
+
+  {
+    id: '8',
+    image: '/assets/classroom@1x.jpg',
+    title: 'Potter CIass',
+    host: 'Atelier Sucré',
+    capacity: 20,
+    ageGroup: '16+',
+    price: '$95',
+    venue: 'Atelier Sucré Kitchen',
+    description: 'Learn the foundations of cake decorating and several piping techniques, including shells, stars, zig-zag and rosettes. The first ½ of this lesson will concentrate on mastering basic skills and proper technique. The second part of the class will focus on applying the skills you learned to create a professional looking textured buttercream cake. Filling, frosting piping, we will do it all.',
+    amenities: ['Ingredients Provided', 'Recipe Book', 'Certificate of Completion'],
+    mapImage: '/assets/map.png',
+    dates: [
+      { date: 'Thu, May 30th, 4:30-7pm EDT', seatsLeft: 11 },
+    ],
+    reviews: 457,
+    rating: 4.6,
+    location: '118 W 22nd St, New York, NY',
+    ageLimit: '12 and older',
+    startDate: 'May 30th, 2023',
+    time: '4:30-7pm EDT',
+    avgSessionDuration: '2.5 hours',
+    numOfClasses: 4,
+    attending: 8,
+    hostType: 'Professional',
+    profilePicture: 'https://randomuser.me/api/portraits/men/80.jpg',
+  },
 ];
 
 const getLearningExperience = (id) => {
