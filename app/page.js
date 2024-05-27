@@ -82,11 +82,12 @@ const HomePage = () => {
 
   return (
     <div className="bg-white">
-      <SubNavbar2/>
       <Navbar />
-      <SubNavbar />
       <Hero />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
+      <SubNavbar2/>
+      <SubNavbar />
+
         <h2 className="text-2xl font-bold mb-4">Popular Categories</h2>
         <div className="flex flex-wrap gap-2 mb-8">
           {[

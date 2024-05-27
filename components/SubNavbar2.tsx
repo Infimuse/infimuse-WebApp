@@ -5,7 +5,7 @@ const categories = ['All', 'Classes', 'Workshops', 'Packages', 'Experiences', ];
 
 const SubNavbar2 = () => {
   return (
-    <div className="bg-white py-4 border ">
+    <div className="bg-white py-4 border-b ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex  gap-8 items-center justify-center">
           {categories.map((category, index) => (

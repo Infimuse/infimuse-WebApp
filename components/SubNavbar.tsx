@@ -33,7 +33,7 @@ const SubNavbar = () => {
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
 
   return (
-    <div className="bg-white shadow-md py-4">
+    <div className="bg-white  py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-4">
         <div className="relative flex space-x-8 overflow-x-auto hide-scroll-bar p-2">
           {categories.map((category, index) => (
