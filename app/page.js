@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Card from '@/components/Card';
 import SubNavbar2 from '@/components/SubNavbar2';
+import DatePickerComponent from '@/components/DatePicker';
 import Download from '@/components/Download';
 
 const experiences = [
@@ -104,6 +105,7 @@ const HomePage = () => {
       <Hero />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
       <SubNavbar2/>
+      <DatePickerComponent/>
       <SubNavbar />
 
         <h2 className="text-2xl font-bold mb-4">Popular Categories</h2>

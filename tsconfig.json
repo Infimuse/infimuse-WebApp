@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Card.js", "app/experience/[id]/page.js", "app/page.js", "components/Navbar.js", "components/Signin.js", "components/SubNavbar.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Card.js", "app/experience/[id]/page.js", "app/page.js", "components/Navbar.js", "components/Signin.js", "components/SubNavbar.js", "components/SubNavbar3.js"],
   "exclude": ["node_modules"]
 }

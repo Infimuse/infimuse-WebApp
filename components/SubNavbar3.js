@@ -34,6 +34,7 @@ const Header = () => {
 
       {/* Middle search */}
       <div className="flex items-center justify-center w-full">
+        <DatePickerComponent />
       </div>
 
       {/* Right */}
