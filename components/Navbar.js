@@ -1,12 +1,15 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { FaSearch, FaBars, FaUserCircle, FaGlobe } from 'react-icons/fa';
+import { FaSearch, FaBars, FaUserCircle, FaGlobe, FaSearchLocation
+} from 'react-icons/fa';
 import logo from '@/public/assets/logo.png';
 import SignIn from './Signin';
 import SignUp from './SignUp';
 import { ToastContainer } from 'react-toastify';
 import DatePickerComponent from './DatePicker';
+
+
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -33,7 +36,13 @@ const Header = () => {
       </div>
 
       {/* Middle search */}
-      <div className="flex items-center justify-center w-full">
+      <div className="  flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
+        <input
+          className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
+          type="text"
+          placeholder="start your search"
+        />
+        <FaSearchLocation className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
 
       {/* Right */}
