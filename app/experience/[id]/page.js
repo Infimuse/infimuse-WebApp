@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { HeartIcon, GiftIcon, BookmarkIcon, UsersIcon } from '@heroicons/react/24/outline';
 import Footer from '@/components/Footer';
 import Download from '@/components/Download';
+import BookingModal from '@/components/BookingModal';
 
 const learningExperiences = [
   {
@@ -70,17 +71,28 @@ const learningExperiences = [
   },
 ];
 
+
+
 const getLearningExperience = (id) => {
   return learningExperiences.find((exp) => exp.id === id);
 };
 
 export default function ExperienceDetail({ params }) {
   const [activeTab, setActiveTab] = useState('description');
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const experience = getLearningExperience(params.id);
 
   if (!experience) {
     notFound();
   }
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="bg-gray-100 text-gray-800 min-h-screen">
@@ -117,7 +129,7 @@ export default function ExperienceDetail({ params }) {
                   <span>{date.date}</span>
                   <div className="flex items-center space-x-4">
                     <span className="text-green-600">{date.seatsLeft} seats left</span>
-                    <button className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Book</button>
+                    <button className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300" onClick={openModal}>Book</button>
                   </div>
                 </div>
               ))}
@@ -144,11 +156,10 @@ export default function ExperienceDetail({ params }) {
             <p>Lots of fun and technically very informative and easy to learn. Lisa is an amazing instructor! I highly recommend this class to anyone interested in cake decorating and perfecting their craft.</p>
             <p className="text-right font-semibold mt-2">- KERRY H.</p>
           </div>
-         
         </div>
         <div className="lg:w-1/4 lg:pl-8">
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <button className="w-full bg-red-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-red-600 transition duration-300 mb-4">
+            <button className="w-full bg-red-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-red-600 transition duration-300 mb-4" onClick={openModal}>
               Book Now
             </button>
             <button className="w-full bg-gray-100 text-gray-700 font-semibold py-3 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 mb-4">
@@ -228,6 +239,7 @@ export default function ExperienceDetail({ params }) {
       </div>
       <Download/>
       <Footer/>
+      <BookingModal isOpen={isModalOpen} closeModal={closeModal} experience={experience} />
     </div>
   );
 }

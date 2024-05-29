@@ -104,30 +104,15 @@ const HomePage = () => {
       <Navbar />
       <Hero />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
-      <SubNavbar2/>
-      <DatePickerComponent/>
-      <SubNavbar />
-
-        <h2 className="text-2xl font-bold mb-4">Popular Categories</h2>
-        <div className="flex flex-wrap gap-2 mb-8">
-          {[
-            'Acting', 'Art', 'Baking', 'Cake Decorating', 'Candle Making',
-            'Certificate Programs', 'Cooking', 'Craft', 'Design', 'Drawing',
-            'Floral Design', 'Glass Blowing', 'Improv', 'Jewelry Making',
-            'Language', 'Mixology', 'Paint & Sip', 'Painting', 'Perfume Making',
-          ].map((category) => (
-            <span
-              key={category}
-              className="px-4 py-2 bg-gray-200 rounded-full cursor-pointer text-sm sm:text-base"
-            >
-              {category}
-            </span>
-          ))}
-        </div>
+        <SubNavbar2 />
+        {/* <div className="flex justify-center items-center ">
+          <DatePickerComponent />
+        </div> */}
+        <SubNavbar />
         <h2 className="text-2xl font-bold mb-4">Explore (All upcoming 10 days)</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {experiences.map((experience) => (
-            <Card key={experience.id} {...experience} className="h-10" />
+            <Card key={experience.id} {...experience} />
           ))}
         </div>
         

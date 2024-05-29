@@ -1,39 +1,47 @@
-// components/SubNavbar.js
-"use client"
+"use client";
 
 import React, { useState } from 'react';
+import { FaFootballBall, FaBasketballBall, FaSwimmer, FaHiking, FaCampground, FaBook, FaPaintBrush, FaRobot, FaLaptopCode, FaMusic, FaDumbbell, FaTheaterMasks, FaCamera, FaLeaf, FaTshirt } from 'react-icons/fa';
+import { GiCookingPot, GiStairsGoal, GiMountainClimbing, GiChemicalDrop } from 'react-icons/gi';
+import { MdPsychology, MdHealthAndSafety, MdBiotech } from 'react-icons/md';
 
 const categories = [
-  { name: 'Sports', items: ['Football', 'Basketball', 'Tennis', 'Swimming'] },
-  { name: 'Life Skills', items: ['Cooking', 'Financial Literacy', 'Time Management'] },
-  { name: 'Adventure', items: ['Hiking', 'Camping', 'Rock Climbing'] },
-  { name: 'Educational', items: ['Math', 'Science', 'History', 'Languages'] },
-  { name: 'Therapy', items: ['Physical Therapy', 'Occupational Therapy', 'Mental Health'] },
-  { name: 'Art', items: ['Drawing', 'Painting', 'Sculpture'] },
-  { name: 'Technology', items: ['Coding', 'Robotics', 'AI'] },
-  { name: 'Science', items: ['Biology', 'Chemistry', 'Physics'] },
-  { name: 'Mathematics', items: ['Algebra', 'Geometry', 'Calculus'] },
-  { name: 'Languages', items: ['English', 'Spanish', 'French', 'German'] },
-  { name: 'History', items: ['Ancient', 'Medieval', 'Modern'] },
-  { name: 'Geography', items: ['Physical', 'Human', 'Environmental'] },
-  { name: 'Drama', items: ['Acting', 'Directing', 'Playwriting'] },
-  { name: 'Photography', items: ['Portrait', 'Landscape', 'Wildlife'] },
-  { name: 'Fitness', items: ['Yoga', 'Pilates', 'Strength Training'] },
-  { name: 'Wellness', items: ['Meditation', 'Nutrition', 'Mental Health'] },
-  { name: 'Crafts', items: ['Knitting', 'Sewing', 'Woodworking'] },
-  { name: 'Gardening', items: ['Vegetable', 'Flower', 'Herb'] },
-  { name: 'Fashion', items: ['Design', 'Styling', 'Modeling'] },
-  { name: 'Coding', items: ['Web Development', 'App Development', 'Data Science'] },
-  { name: 'Robotics', items: ['Building', 'Programming', 'Controlling'] },
-  { name: 'Astronomy', items: ['Stargazing', 'Astrophotography', 'Planetary Science'] },
-  { name: 'Music', items: ['Instrumental', 'Vocal', 'Theory'] },
+  { name: 'Sports', icon: <FaFootballBall />, subcategories: ['Football', 'Basketball', 'Tennis', 'Swimming'] },
+  { name: 'Life Skills', icon: <GiCookingPot />, subcategories: ['Cooking', 'Financial Literacy', 'Time Management'] },
+  { name: 'Adventure', icon: <FaHiking />, subcategories: ['Hiking', 'Camping', 'Rock Climbing'] },
+  { name: 'Educational', icon: <FaBook />, subcategories: ['Math', 'Science', 'History', 'Languages'] },
+  { name: 'Therapy', icon: <MdPsychology />, subcategories: ['Physical Therapy', 'Occupational Therapy', 'Mental Health'] },
+  { name: 'Art', icon: <FaPaintBrush />, subcategories: ['Drawing', 'Painting', 'Sculpture'] },
+  { name: 'Technology', icon: <FaLaptopCode />, subcategories: ['Coding', 'Robotics', 'AI'] },
+  { name: 'Science', icon: <GiChemicalDrop />, subcategories: ['Biology', 'Chemistry', 'Physics'] },
+  { name: 'Mathematics', icon: <FaBook />, subcategories: ['Algebra', 'Geometry', 'Calculus'] },
+  { name: 'Languages', icon: <FaBook />, subcategories: ['English', 'Spanish', 'French', 'German'] },
+  { name: 'History', icon: <FaBook />, subcategories: ['Ancient', 'Medieval', 'Modern'] },
+  { name: 'Geography', icon: <FaBook />, subcategories: ['Physical', 'Human', 'Environmental'] },
+  { name: 'Drama', icon: <FaTheaterMasks />, subcategories: ['Acting', 'Directing', 'Playwriting'] },
+  { name: 'Photography', icon: <FaCamera />, subcategories: ['Portrait', 'Landscape', 'Wildlife'] },
+  { name: 'Fitness', icon: <FaDumbbell />, subcategories: ['Yoga', 'Pilates', 'Strength Training'] },
+  { name: 'Wellness', icon: <MdHealthAndSafety />, subcategories: ['Meditation', 'Nutrition', 'Mental Health'] },
+  { name: 'Crafts', icon: <GiStairsGoal />, subcategories: ['Knitting', 'Sewing', 'Woodworking'] },
+  { name: 'Gardening', icon: <FaLeaf />, subcategories: ['Vegetable', 'Flower', 'Herb'] },
+  { name: 'Fashion', icon: <FaTshirt />, subcategories: ['Design', 'Styling', 'Modeling'] },
+  { name: 'Coding', icon: <FaLaptopCode />, subcategories: ['Web Development', 'App Development', 'Data Science'] },
+  { name: 'Robotics', icon: <FaRobot />, subcategories: ['Building', 'Programming', 'Controlling'] },
+  { name: 'Astronomy', icon: <MdBiotech />, subcategories: ['Stargazing', 'Astrophotography', 'Planetary Science'] },
+  { name: 'Music', icon: <FaMusic />, subcategories: ['Instrumental', 'Vocal', 'Theory'] },
 ];
 
 const SubNavbar = () => {
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const handleCategoryClick = (index: number) => {
+    setSelectedCategory(categories[index].name);
+    setActiveCategory(index);
+  };
 
   return (
-    <div className="bg-white  py-4">
+    <div className="bg-white py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-4">
         <div className="relative flex space-x-8 overflow-x-auto hide-scroll-bar p-2">
           {categories.map((category, index) => (
@@ -42,21 +50,28 @@ const SubNavbar = () => {
               className="relative flex flex-col items-center cursor-pointer hover:text-pink-600 transition duration-150 ease-in-out"
               onMouseEnter={() => setActiveCategory(index)}
               onMouseLeave={() => setActiveCategory(null)}
+              onClick={() => handleCategoryClick(index)}
             >
+              <span className="text-2xl text-black">{category.icon}</span>
               <span className="text-sm font-medium text-gray-700">{category.name}</span>
-              {activeCategory === index && (
-                <div className="absolute top-full mt-2 w-64 bg-white shadow-lg rounded-lg p-4">
-                  <ul>
-                    {category.items.map((item, idx) => (
-                      <li key={idx} className="py-1 hover:text-pink-600">{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </div>
           ))}
-          
         </div>
+        {selectedCategory && (
+          <div className="mt-8">
+            <h2 className="text-2xl font-bold mb-4">Subcategories of {selectedCategory}</h2>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {categories.find(cat => cat.name === selectedCategory)?.subcategories.map((subcategory) => (
+                <span
+                  key={subcategory}
+                  className="px-4 py-2 bg-gray-200 rounded-full cursor-pointer text-sm sm:text-base"
+                >
+                  {subcategory}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
