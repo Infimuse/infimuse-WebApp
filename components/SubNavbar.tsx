@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { FaFootballBall, FaBasketballBall, FaSwimmer, FaHiking, FaCampground, FaBook, FaPaintBrush, FaRobot, FaLaptopCode, FaMusic, FaDumbbell, FaTheaterMasks, FaCamera, FaLeaf, FaTshirt } from 'react-icons/fa';
+import { FaFootballBall, FaBasketballBall, FaSwimmer, FaHiking, FaCampground, FaBook, FaPaintBrush, FaRobot, FaLaptopCode, FaMusic, FaDumbbell, FaTheaterMasks, FaCamera, FaLeaf, FaTshirt, FaArrowRight } from 'react-icons/fa';
 import { GiCookingPot, GiStairsGoal, GiMountainClimbing, GiChemicalDrop } from 'react-icons/gi';
 import { MdPsychology, MdHealthAndSafety, MdBiotech } from 'react-icons/md';
 
@@ -41,7 +41,7 @@ const SubNavbar = () => {
   };
 
   return (
-    <div className="bg-white py-4">
+    <div className="bg-white py-4 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-4">
         <div className="relative flex space-x-8 overflow-x-auto hide-scroll-bar p-2">
           {categories.map((category, index) => (
@@ -56,6 +56,9 @@ const SubNavbar = () => {
               <span className="text-sm font-medium text-gray-700">{category.name}</span>
             </div>
           ))}
+        </div>
+        <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-white">
+          <FaArrowRight className="text-gray-800 text-2xl animate-dance" />
         </div>
         {selectedCategory && (
           <div className="mt-8">

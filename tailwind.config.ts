@@ -13,6 +13,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        dance: {
+          '0%, 100%': { transform: 'translateY(-50%) rotate(0deg)' },
+          '50%': { transform: 'translateY(-50%) rotate(15deg)' },
+        },
+      },
+      animation: {
+        dance: 'dance 1s infinite',
+      },
     },
   },
   plugins: [],
