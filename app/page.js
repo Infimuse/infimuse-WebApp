@@ -109,7 +109,7 @@ const HomePage = () => {
           <DatePickerComponent />
         </div> */}
         <SubNavbar />
-        <h2 className="text-2xl font-bold mb-4">Explore (All upcoming 10 days)</h2>
+        <h2 className="text-2xl font-bold mb-4">Explore and Connect </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {experiences.map((experience) => (
             <Card key={experience.id} {...experience} />
