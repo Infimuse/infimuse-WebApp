@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import Navbar from '@/components/Navbar';
 import SubNavbar from '@/components/SubNavbar';
 import Footer from '@/components/Footer';
@@ -7,6 +8,13 @@ import Card from '@/components/Card';
 import SubNavbar2 from '@/components/SubNavbar2';
 import Download from '@/components/Download';
 import Banner from '@/components/Banner';
+import DatePicker from '@/components/DatePicker';
+
+const Arrow = () => (
+  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-pink-500 p-2 rounded-full animate-dance">
+    <FaArrowRight className="text-white text-2xl" />
+  </div>
+);
 
 const experiences = [
 
@@ -275,9 +283,13 @@ const HomePage = () => {
       {/* <Hero /> */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <SubNavbar2 />
+        <div className="mr-[150px]">
+          <DatePicker />
+        </div>
+        
         <SubNavbar />
         
-        <section className="mb-8">
+        <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
               <h2 className="text-2xl font-bold">Explore and Connect</h2>
@@ -285,77 +297,72 @@ const HomePage = () => {
             </div>
             <button className="text-black py-2 px-4 rounded-lg">View More</button>
           </div>
-          <div className="space-y-4">
-            <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
-              {experiences.slice(0, 16).map((experience) => (
-                <div key={experience.id} >
-                  <Card {...experience} />
-                </div>
-              ))}
-            </div>
-            {/* <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
-              {experiences.slice(8, 16).map((experience) => (
-                <div key={experience.id} >
-                  <Card {...experience} />
-                </div>
-              ))}
-            </div> */}
+          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+            {experiences.slice(0, 16).map((experience) => (
+              <div key={experience.id}>
+                <Card {...experience} />
+              </div>
+            ))}
           </div>
+          <Arrow />
         </section>
-        <Banner />
-
-
         
-        <section className="mb-8">
+        <Banner />
+        
+        <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
               <h2 className="text-2xl font-bold">Sipping Hangouts</h2>
               <p className="text-gray-600">Discover great places to hang out and enjoy your favorite drinks.</p>
             </div>
-            <button className=" text-black py-2 px-4 rounded-lg">View More</button>
+            <button className="text-black py-2 px-4 rounded-lg">View More</button>
           </div>
           <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
             {renderCards('Sipping Hangouts')}
           </div>
+          <Arrow />
         </section>
-
-        <section className="mb-8">
+        
+        <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4 hide-scrollbar">
             <div>
               <h2 className="text-2xl font-bold">Kids Activities</h2>
               <p className="text-gray-600">Fun and educational activities designed for kids of all ages.</p>
             </div>
-            <button className=" text-black py-2 px-4 rounded-lg">View More</button>
+            <button className="text-black py-2 px-4 rounded-lg">View More</button>
           </div>
           <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
             {renderCards('Kids Activities')}
           </div>
+          <Arrow />
         </section>
-
-        <section className="mb-8">
+        
+        <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
               <h2 className="text-2xl font-bold">Workshops</h2>
               <p className="text-gray-600">Join our workshops and enhance your skills in various fields.</p>
             </div>
-            <button className=" text-black py-2 px-4 rounded-lg">View More</button>
+            <button className="text-black py-2 px-4 rounded-lg">View More</button>
           </div>
           <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
             {renderCards('Workshops')}
           </div>
+          <Arrow />
         </section>
-
-        <section className="mb-8">
+        
+        <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
               <h2 className="text-2xl font-bold">Packages</h2>
               <p className="text-gray-600">Exclusive packages to get the best value for your activities.</p>
             </div>
-            <button className=" text-black py-2 px-4 rounded-lg">View More</button>
+            <button className="text-black py-2 px-4 rounded-lg">View More</button>
           </div>
           <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
             {renderCards('Packages')}
           </div>
+          <Arrow />
         </section>
       </div>
       <Download />
@@ -365,4 +372,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
