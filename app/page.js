@@ -283,9 +283,9 @@ const HomePage = () => {
       {/* <Hero /> */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <SubNavbar2 />
-        <div className="mr-[150px]">
-          <DatePicker />
-        </div>
+        {/* <div className="mr-[150px]">
+          {/* <DatePicker /> 
+        </div> */}
         
         <SubNavbar />
         
