@@ -43,7 +43,7 @@ const Header = () => {
       {/* Right */}
       <div className="flex items-center justify-end space-x-4 text-gray-500">
         <p className="hidden md:inline cursor-pointer">Community</p>
-        <p className="hidden md:inline cursor-pointer">Become a host</p>
+        <p className="hidden md:inline cursor-pointer bg-pink-600 p-2 rounded-md text-white">Become a host</p>
         {/* <FaGlobe className="h-6 cursor-pointer" /> */}
         <div className="relative">
           <div

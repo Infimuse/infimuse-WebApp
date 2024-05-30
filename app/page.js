@@ -6,40 +6,14 @@ import Hero from '@/components/Hero';
 import Card from '@/components/Card';
 import SubNavbar2 from '@/components/SubNavbar2';
 import Download from '@/components/Download';
-import Banner from '@/components/Banner'
+import Banner from '@/components/Banner';
 
 const experiences = [
-  {
-    id: '1',
-    image: 'https://images.pexels.com/photos/235606/pexels-photo-235606.jpeg', // Baking
-    title: 'Bake Your Own French Croissant',
-    host: 'Atelier Sucré',
-    status: 'Upcoming',
-    category: 'Learn a Skill',
-    price: '$100',
-  },
-  {
-    id: '2',
-    image: 'https://images.pexels.com/photos/4194513/pexels-photo-4194513.jpeg', // Cooking
-    title: 'Tagliatelle al Pesto with an Italian Master Chef',
-    host: 'CocuSocial Cooking Classes',
-    status: 'Upcoming',
-    category: 'Unique Experiences',
-    price: '$100',
-  },
-  {
-    id: '3',
-    image: 'https://images.pexels.com/photos/3804290/pexels-photo-3804290.jpeg', // Pottery
-    title: 'Pottery Wheel Basics',
-    host: 'Ceramics on 10th',
-    status: 'Upcoming',
-    category: 'Learn a Skill',
-    price: '$100',
-  },
+
   // Sipping Hangouts
   {
     id: '10',
-    image: 'https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg', // Wine Tasting
+    image: 'https://images.pexels.com/photos/1473007/pexels-photo-1473007.jpeg',
     title: 'Wine Tasting',
     host: 'Vineyard',
     status: 'Upcoming',
@@ -48,7 +22,7 @@ const experiences = [
   },
   {
     id: '14',
-    image: 'https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg', // Beer Brewing
+    image: 'https://images.pexels.com/photos/2132257/pexels-photo-2132257.jpeg',
     title: 'Beer Brewing Workshop',
     host: 'Local Brewery',
     status: 'Upcoming',
@@ -57,7 +31,34 @@ const experiences = [
   },
   {
     id: '15',
-    image: 'https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg', // Cocktail Mixology
+    image: 'https://images.pexels.com/photos/533355/pexels-photo-533355.jpeg',
+    title: 'Cocktail Mixology Class',
+    host: 'Mixology Bar',
+    status: 'Upcoming',
+    category: 'Sipping Hangouts',
+    price: '$70',
+  },
+  {
+    id: '10',
+    image: 'https://images.pexels.com/photos/1473007/pexels-photo-1473007.jpeg',
+    title: 'Wine Tasting',
+    host: 'Vineyard',
+    status: 'Upcoming',
+    category: 'Sipping Hangouts',
+    price: '$50',
+  },
+  {
+    id: '14',
+    image: 'https://images.pexels.com/photos/2132257/pexels-photo-2132257.jpeg',
+    title: 'Beer Brewing Workshop',
+    host: 'Local Brewery',
+    status: 'Upcoming',
+    category: 'Sipping Hangouts',
+    price: '$60',
+  },
+  {
+    id: '15',
+    image: 'https://images.pexels.com/photos/533355/pexels-photo-533355.jpeg',
     title: 'Cocktail Mixology Class',
     host: 'Mixology Bar',
     status: 'Upcoming',
@@ -67,7 +68,7 @@ const experiences = [
   // Kids Activities
   {
     id: '11',
-    image: 'https://images.pexels.com/photos/4010964/pexels-photo-4010964.jpeg', // Kids Cooking
+    image: 'https://images.pexels.com/photos/5765/kids.jpg',
     title: 'Kids Cooking Class',
     host: 'Cooking School',
     status: 'Upcoming',
@@ -76,7 +77,7 @@ const experiences = [
   },
   {
     id: '16',
-    image: 'https://images.pexels.com/photos/5038082/pexels-photo-5038082.jpeg', // Art and Craft
+    image: 'https://images.pexels.com/photos/701014/pexels-photo-701014.jpeg',
     title: 'Art and Craft Workshop',
     host: 'Art Studio',
     status: 'Upcoming',
@@ -85,17 +86,44 @@ const experiences = [
   },
   {
     id: '17',
-    image: 'https://images.pexels.com/photos/3755445/pexels-photo-3755445.jpeg', // Kids Dance
+    image: 'https://images.pexels.com/photos/385025/pexels-photo-385025.jpeg',
     title: 'Kids Dance Class',
     host: 'Dance Academy',
     status: 'Upcoming',
     category: 'Kids Activities',
     price: '$35',
   },
+  {
+    id: '1',
+    image: 'https://images.pexels.com/photos/3026809/pexels-photo-3026809.jpeg',
+    title: 'Bake Your Own French Croissant',
+    host: 'Atelier Sucré',
+    status: 'Upcoming',
+    category: 'Kids Activities',
+    price: '$100',
+  },
+  {
+    id: '2',
+    image: 'https://images.pexels.com/photos/325680/pexels-photo-325680.jpeg',
+    title: 'Tagliatelle al Pesto with an Italian Master Chef',
+    host: 'CocuSocial Cooking Classes',
+    status: 'Upcoming',
+    category: 'Kids Activities',
+    price: '$100',
+  },
+  {
+    id: '3',
+    image: 'https://images.pexels.com/photos/243326/pexels-photo-243326.jpeg',
+    title: 'Pottery Wheel Basics',
+    host: 'Ceramics on 10th',
+    status: 'Upcoming',
+    category: 'Kids Activities',
+    price: '$100',
+  },
   // Workshops
   {
     id: '12',
-    image: 'https://images.pexels.com/photos/1368692/pexels-photo-1368692.jpeg', // Photography Workshop
+    image: 'https://images.pexels.com/photos/1799344/pexels-photo-1799344.jpeg',
     title: 'Photography Workshop',
     host: 'Photo Studio',
     status: 'Upcoming',
@@ -104,7 +132,7 @@ const experiences = [
   },
   {
     id: '18',
-    image: 'https://images.pexels.com/photos/3184299/pexels-photo-3184299.jpeg', // Digital Marketing Workshop
+    image: 'https://images.pexels.com/photos/3787329/pexels-photo-3787329.jpeg',
     title: 'Digital Marketing Workshop',
     host: 'Marketing Experts',
     status: 'Upcoming',
@@ -113,7 +141,7 @@ const experiences = [
   },
   {
     id: '19',
-    image: 'https://images.pexels.com/photos/3806756/pexels-photo-3806756.jpeg', // Creative Writing Workshop
+    image: 'https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg',
     title: 'Creative Writing Workshop',
     host: 'Writers Guild',
     status: 'Upcoming',
@@ -123,7 +151,7 @@ const experiences = [
   // Packages
   {
     id: '13',
-    image: 'https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg', // Fitness Bootcamp
+    image: 'https://images.pexels.com/photos/936093/pexels-photo-936093.jpeg',
     title: 'Fitness Bootcamp',
     host: 'Gym',
     status: 'Upcoming',
@@ -132,7 +160,7 @@ const experiences = [
   },
   {
     id: '20',
-    image: 'https://images.pexels.com/photos/1051743/pexels-photo-1051743.jpeg', // Yoga Retreat
+    image: 'https://images.pexels.com/photos/3820381/pexels-photo-3820381.jpeg',
     title: 'Yoga Retreat',
     host: 'Yoga Studio',
     status: 'Upcoming',
@@ -141,99 +169,98 @@ const experiences = [
   },
   {
     id: '21',
-    image: 'https://images.pexels.com/photos/769166/pexels-photo-769166.jpeg', // Wellness Spa Weekend
+    image: 'https://images.pexels.com/photos/3741015/pexels-photo-3741015.jpeg',
     title: 'Wellness Spa Weekend',
     host: 'Luxury Spa',
     status: 'Upcoming',
     category: 'Packages',
     price: '$300',
   },
-  // More Learn a Skill
+  // // More Learn a Skill
   {
     id: '22',
-    image: 'https://images.pexels.com/photos/164869/pexels-photo-164869.jpeg', // Learn to Play Guitar
+    image: 'https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg',
     title: 'Learn to Play Guitar',
     host: 'Music Academy',
     status: 'Upcoming',
-    category: 'Learn a Skill',
+    category: 'Packages',
     price: '$120',
   },
   {
     id: '23',
-    image: 'https://images.pexels.com/photos/3747105/pexels-photo-3747105.jpeg', // DIY Home Repairs
+    image: 'https://images.pexels.com/photos/449627/pexels-photo-449627.jpeg',
     title: 'DIY Home Repairs',
     host: 'Home Improvement Center',
     status: 'Upcoming',
-    category: 'Learn a Skill',
+    category: 'Packages',
     price: '$80',
   },
   {
     id: '24',
-    image: 'https://images.pexels.com/photos/1236789/pexels-photo-1236789.jpeg', // Gardening for Beginners
+    image: 'https://images.pexels.com/photos/66066/pexels-photo-66066.jpeg',
     title: 'Gardening for Beginners',
     host: 'Community Garden',
     status: 'Upcoming',
-    category: 'Learn a Skill',
+    category: 'Packages',
     price: '$50',
   },
-  // More Unique Experiences
-  {
-    id: '25',
-    image: 'https://images.pexels.com/photos/163760/pexels-photo-163760.jpeg', // Hot Air Balloon Ride
-    title: 'Hot Air Balloon Ride',
-    host: 'Adventure Company',
-    status: 'Upcoming',
-    category: 'Unique Experiences',
-    price: '$300',
-  },
+  // // More Unique Experiences
+  // {
+  //   id: '25',
+  //   image: 'https://images.pexels.com/photos/1209318/pexels-photo-1209318.jpeg',
+  //   title: 'Hot Air Balloon Ride',
+  //   host: 'Adventure Company',
+  //   status: 'Upcoming',
+  //   category: 'Unique Experiences',
+  //   price: '$300',
+  // },
   {
     id: '26',
-    image: 'https://images.pexels.com/photos/133021/pexels-photo-133021.jpeg', // Scuba Diving Adventure
+    image: 'https://images.pexels.com/photos/164502/pexels-photo-164502.jpeg',
     title: 'Scuba Diving Adventure',
     host: 'Dive School',
     status: 'Upcoming',
-    category: 'Unique Experiences',
+    category: 'Workshops',
     price: '$400',
   },
   {
     id: '27',
-    image: 'https://images.pexels.com/photos/33688/pexels-photo.jpg', // Helicopter Tour
+    image: 'https://images.pexels.com/photos/33608/aircraft-jet-landing-cloud.jpg',
     title: 'Helicopter Tour',
     host: 'Aerial Tours',
     status: 'Upcoming',
-    category: 'Unique Experiences',
+    category: 'Workshops',
     price: '$500',
   },
   // More Practice
   {
     id: '28',
-    image: 'https://images.pexels.com/photos/3820379/pexels-photo-3820379.jpeg', // Meditation Classes
+    image: 'https://images.pexels.com/photos/668298/pexels-photo-668298.jpeg',
     title: 'Meditation Classes',
     host: 'Wellness Center',
     status: 'Upcoming',
-    category: 'Practice',
+    category: 'Workshops',
     price: '$90',
   },
   {
     id: '29',
-    image: 'https://images.pexels.com/photos/4513240/pexels-photo-4513240.jpeg', // Advanced Yoga
+    image: 'https://images.pexels.com/photos/3820380/pexels-photo-3820380.jpeg',
     title: 'Advanced Yoga',
     host: 'Yoga Studio',
     status: 'Upcoming',
     category: 'Practice',
     price: '$110',
   },
-  {
-    id: '30',
-    image: 'https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg', // CrossFit Training
-    title: 'CrossFit Training',
-    host: 'CrossFit Gym',
-    status: 'Upcoming',
-    category: 'Practice',
-    price: '$130',
-  },
+  // {
+  //   id: '30',
+  //   image: 'https://images.pexels.com/photos/303846/pexels-photo-303846.jpeg',
+  //   title: 'CrossFit Training',
+  //   host: 'CrossFit Gym',
+  //   status: 'Upcoming',
+  //   category: 'Practice',
+  //   price: '$130',
+  // },
 ];
-
 
 const HomePage = () => {
   const renderCards = (category) => {
@@ -249,42 +276,88 @@ const HomePage = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <SubNavbar2 />
         <SubNavbar />
-        <h2 className="text-2xl font-bold mb-4">Explore and Connect</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {experiences.map((experience) => (
-            <Card key={experience.id} {...experience} />
-          ))}
-        </div>
         
-        {/* Sipping Hangouts Section */}
-        <h2 className="text-2xl font-bold mt-8 mb-4">Sipping Hangouts</h2>
-        <div className="flex space-x-4 overflow-x-auto pb-4">
-          {renderCards('Sipping Hangouts')}
-        </div>
-        <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg">View More</button>
+        <section className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <div>
+              <h2 className="text-2xl font-bold">Explore and Connect</h2>
+              <p className="text-gray-600">Find a full calendar of activities that will keep you creative this week.</p>
+            </div>
+            <button className="text-black py-2 px-4 rounded-lg">View More</button>
+          </div>
+          <div className="space-y-4">
+            <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+              {experiences.slice(0, 8).map((experience) => (
+                <div key={experience.id} >
+                  <Card {...experience} />
+                </div>
+              ))}
+            </div>
+            <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+              {experiences.slice(8, 16).map((experience) => (
+                <div key={experience.id} >
+                  <Card {...experience} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <Banner />
 
-        {/* Kids Activities Section */}
-        <h2 className="text-2xl font-bold mt-8 mb-4">Kids Activities</h2>
-        <div className="flex space-x-4 overflow-x-auto pb-4">
-          {renderCards('Kids Activities')}
-        </div>
-        <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg">View More</button>
 
-        {/* Workshops Section */}
-        <h2 className="text-2xl font-bold mt-8 mb-4">Workshops</h2>
-        <div className="flex space-x-4 overflow-x-auto pb-4">
-          {renderCards('Workshops')}
-        </div>
-        <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg">View More</button>
+        
+        <section className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <div>
+              <h2 className="text-2xl font-bold">Sipping Hangouts</h2>
+              <p className="text-gray-600">Discover great places to hang out and enjoy your favorite drinks.</p>
+            </div>
+            <button className=" text-black py-2 px-4 rounded-lg">View More</button>
+          </div>
+          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+            {renderCards('Sipping Hangouts')}
+          </div>
+        </section>
 
-        {/* Packages Section */}
-        <h2 className="text-2xl font-bold mt-8 mb-4">Packages</h2>
-        <div className="flex space-x-4 overflow-x-auto pb-4">
-          {renderCards('Packages')}
-        </div>
-        <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg">View More</button>
+        <section className="mb-8">
+          <div className="flex justify-between items-center mb-4 hide-scrollbar">
+            <div>
+              <h2 className="text-2xl font-bold">Kids Activities</h2>
+              <p className="text-gray-600">Fun and educational activities designed for kids of all ages.</p>
+            </div>
+            <button className=" text-black py-2 px-4 rounded-lg">View More</button>
+          </div>
+          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+            {renderCards('Kids Activities')}
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <div>
+              <h2 className="text-2xl font-bold">Workshops</h2>
+              <p className="text-gray-600">Join our workshops and enhance your skills in various fields.</p>
+            </div>
+            <button className=" text-black py-2 px-4 rounded-lg">View More</button>
+          </div>
+          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+            {renderCards('Workshops')}
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <div>
+              <h2 className="text-2xl font-bold">Packages</h2>
+              <p className="text-gray-600">Exclusive packages to get the best value for your activities.</p>
+            </div>
+            <button className=" text-black py-2 px-4 rounded-lg">View More</button>
+          </div>
+          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+            {renderCards('Packages')}
+          </div>
+        </section>
       </div>
-      <Banner/>
       <Download />
       <Footer />
     </div>
@@ -292,3 +365,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
