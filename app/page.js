@@ -272,7 +272,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <SubNavbar2 />
         <SubNavbar />
@@ -281,25 +281,25 @@ const HomePage = () => {
           <div className="flex justify-between items-center mb-4">
             <div>
               <h2 className="text-2xl font-bold">Explore and Connect</h2>
-              <p className="text-gray-600">Find a full calendar of activities that will keep you creative this week.</p>
+              <p className="text-gray-600">Discover fun enriching Day Hangouts around you</p>
             </div>
             <button className="text-black py-2 px-4 rounded-lg">View More</button>
           </div>
           <div className="space-y-4">
             <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
-              {experiences.slice(0, 8).map((experience) => (
+              {experiences.slice(0, 16).map((experience) => (
                 <div key={experience.id} >
                   <Card {...experience} />
                 </div>
               ))}
             </div>
-            <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+            {/* <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
               {experiences.slice(8, 16).map((experience) => (
                 <div key={experience.id} >
                   <Card {...experience} />
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
         <Banner />
