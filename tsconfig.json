@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Card.js", "app/experience/[id]/page.js", "app/page.js", "components/Navbar.js", "components/Signin.js", "components/SubNavbar.js", "components/SubNavbar3.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Card.js", "app/experience/[id]/page.js", "app/page.js", "components/Navbar.js", "components/Signin.js", "components/SubNavbar.js", "components/SubNavbar3.js", "app/workshops/page.js", "app/Kids-activities/page.js", "app/sipping-hangouts/page.js"],
   "exclude": ["node_modules"]
 }

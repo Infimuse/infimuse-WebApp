@@ -9,6 +9,7 @@ import SubNavbar2 from '@/components/SubNavbar2';
 import Download from '@/components/Download';
 import Banner from '@/components/Banner';
 import DatePicker from '@/components/DatePicker';
+import Link from 'next/link';
 
 const Arrow = () => (
   <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-pink-500 p-2 rounded-full animate-dance">
@@ -295,7 +296,9 @@ const HomePage = () => {
               <h2 className="text-2xl font-bold">Explore and Connect</h2>
               <p className="text-gray-600">Discover fun enriching Day Hangouts around you</p>
             </div>
-            <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            <Link href="/Explore">
+              <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            </Link>
           </div>
           <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
             {experiences.slice(0, 16).map((experience) => (
@@ -315,7 +318,9 @@ const HomePage = () => {
               <h2 className="text-2xl font-bold">Sipping Hangouts</h2>
               <p className="text-gray-600">Discover great places to hang out and enjoy your favorite drinks.</p>
             </div>
-            <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            <Link href="/sipping-hangouts">
+              <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            </Link>
           </div>
           <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
             {renderCards('Sipping Hangouts')}
@@ -329,7 +334,9 @@ const HomePage = () => {
               <h2 className="text-2xl font-bold">Kids Activities</h2>
               <p className="text-gray-600">Fun and educational activities designed for kids of all ages.</p>
             </div>
-            <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            <Link href="/Kids-activities">
+              <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            </Link>
           </div>
           <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
             {renderCards('Kids Activities')}
@@ -343,7 +350,9 @@ const HomePage = () => {
               <h2 className="text-2xl font-bold">Workshops</h2>
               <p className="text-gray-600">Join our workshops and enhance your skills in various fields.</p>
             </div>
-            <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            <Link href="/workshops">
+              <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            </Link>
           </div>
           <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
             {renderCards('Workshops')}
@@ -357,7 +366,9 @@ const HomePage = () => {
               <h2 className="text-2xl font-bold">Packages</h2>
               <p className="text-gray-600">Exclusive packages to get the best value for your activities.</p>
             </div>
-            <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            <Link href="/packages">
+              <button className="text-black py-2 px-4 rounded-lg">View More</button>
+            </Link>
           </div>
           <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
             {renderCards('Packages')}
