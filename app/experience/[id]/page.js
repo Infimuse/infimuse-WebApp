@@ -8,73 +8,10 @@ import { HeartIcon, GiftIcon, BookmarkIcon, UsersIcon } from '@heroicons/react/2
 import Footer from '@/components/Footer';
 import Download from '@/components/Download';
 import BookingModal from '@/components/BookingModal';
-
-const learningExperiences = [
-  {
-    id: '1',
-    image: '/assets/cooking@1x.jpg',
-    title: 'Bake Your Own French Croissant',
-    host: 'Atelier Sucré',
-    capacity: 20,
-    ageGroup: '16+',
-    price: '$95',
-    venue: 'Atelier Sucré Kitchen',
-    description: 'Learn the foundations of cake decorating and several piping techniques, including shells, stars, zig-zag and rosettes. The first ½ of this lesson will concentrate on mastering basic skills and proper technique. The second part of the class will focus on applying the skills you learned to create a professional looking textured buttercream cake. Filling, frosting piping, we will do it all.',
-    amenities: ['Ingredients Provided', 'Recipe Book', 'Certificate of Completion'],
-    mapImage: '/assets/map.png',
-    dates: [
-      { date: 'Thu, May 30th, 4:30-7pm EDT', seatsLeft: 11 },
-      { date: 'Sat, Jun 1st, 11am-1:30pm EDT', seatsLeft: 12 },
-      { date: 'Fri, Jun 14th, 10am-1:30pm EDT', seatsLeft: 12 },
-      { date: 'Fri, Jun 14th, 2-4:30pm EDT', seatsLeft: 12 },
-    ],
-    reviews: 457,
-    rating: 4.6,
-    location: '118 W 22nd St, New York, NY',
-    ageLimit: '12 and older',
-    startDate: 'May 30th, 2023',
-    time: '4:30-7pm EDT',
-    avgSessionDuration: '2.5 hours',
-    numOfClasses: 4,
-    attending: 8,
-    hostType: 'Professional',
-    profilePicture: 'https://randomuser.me/api/portraits/men/75.jpg',
-  },
-  // Add more learning experiences as needed
-
-  {
-    id: '8',
-    image: '/assets/classroom@1x.jpg',
-    title: 'Potter CIass',
-    host: 'Atelier Sucré',
-    capacity: 20,
-    ageGroup: '16+',
-    price: '$95',
-    venue: 'Atelier Sucré Kitchen',
-    description: 'Learn the foundations of cake decorating and several piping techniques, including shells, stars, zig-zag and rosettes. The first ½ of this lesson will concentrate on mastering basic skills and proper technique. The second part of the class will focus on applying the skills you learned to create a professional looking textured buttercream cake. Filling, frosting piping, we will do it all.',
-    amenities: ['Ingredients Provided', 'Recipe Book', 'Certificate of Completion'],
-    mapImage: '/assets/map.png',
-    dates: [
-      { date: 'Thu, May 30th, 4:30-7pm EDT', seatsLeft: 11 },
-    ],
-    reviews: 457,
-    rating: 4.6,
-    location: '118 W 22nd St, New York, NY',
-    ageLimit: '12 and older',
-    startDate: 'May 30th, 2023',
-    time: '4:30-7pm EDT',
-    avgSessionDuration: '2.5 hours',
-    numOfClasses: 4,
-    attending: 8,
-    hostType: 'Professional',
-    profilePicture: 'https://randomuser.me/api/portraits/men/80.jpg',
-  },
-];
-
-
+import experiences from '@/data/data';
 
 const getLearningExperience = (id) => {
-  return learningExperiences.find((exp) => exp.id === id);
+  return experiences.find((exp) => exp.id === id);
 };
 
 export default function ExperienceDetail({ params }) {
@@ -204,19 +141,20 @@ export default function ExperienceDetail({ params }) {
           <div className="bg-white rounded-lg shadow-lg p-6 mb-8 flex flex-col items-center">
             <h1 className=' font-bold mb-4'>Meet the Host</h1>
             <Image
-              src="https://randomuser.me/api/portraits/men/89.jpg" // Replace with the actual image URL
-              alt="Kevin Hart"
+              src={experience.profilePicture} // Replace with the actual image URL
+              alt={experience.host}
               width={100}
               height={100}
               className="rounded-full mb-4"
             />
-            <h2 className="text-2xl font-bold mb-2">Kevin Otieno</h2>
-            <p className="text-sm text-gray-500 mb-2">Started hosting in 2024</p>
+            <h2 className="text-2xl font-bold mb-2">{experience.host}</h2>
+            <p className="text-sm text-gray-500 mb-2">Started hosting in {experience.hostType}</p>
             <a href="/Host" className="w-full">
               <button className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 mt-4">
                 See profile
               </button>
             </a>
+            
           </div>
           <div className="bg-white rounded-lg shadow-lg p-6 mb-8 flex flex-col items-center">
             <h1 className=' font-bold mb-4'>Meet the Instructor</h1>
