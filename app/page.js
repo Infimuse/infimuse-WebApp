@@ -298,7 +298,7 @@ const HomePage = () => {
     <div className="bg-white">
       <Navbar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
-        <SubNavbar2 />
+        {/* <SubNavbar2 /> */}
         <SubNavbar />
 
         <section className="relative mb-8">

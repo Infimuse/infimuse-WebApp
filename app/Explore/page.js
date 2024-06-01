@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import Card from '@/components/Card';
 import experiences from '@/data/experiences';
 import Link from 'next/link';
+import SubNavbar from '@/components/SubNavbar';
+import Datepicker from '@/components/DatePicker';
 import SubNavbar2 from '@/components/SubNavbar2';
 
 
@@ -11,7 +13,11 @@ const Explore = () => {
   return (
     <div className="bg-white">
       <Navbar />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <SubNavbar2 />
+        <SubNavbar />
+        <Datepicker />
+        {/* <SubNavbar2 /> */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <h2 className="text-2xl font-bold mb-4">Explore All Listings</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -26,6 +32,7 @@ const Explore = () => {
         </div>
       </div>
       <Footer />
+    </div>
     </div>
   );
 };

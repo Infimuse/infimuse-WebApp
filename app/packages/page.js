@@ -3,6 +3,9 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Card from '@/components/Card';
 import experiences from '@/data/experiences'; // Adjust the path as necessary
+import SubNavbar from '@/components/SubNavbar';
+import Datepicker from '@/components/DatePicker';
+import SubNavbar2 from '@/components/SubNavbar2';
 
 const Packages = () => {
   const renderCards = (category) => {
@@ -15,12 +18,17 @@ const Packages = () => {
     <div className="bg-white">
       <Navbar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
+        <SubNavbar2 />
+        <SubNavbar />
+        <Datepicker />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <h2 className="text-2xl font-bold mb-4">Packages</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {renderCards('Packages')}
         </div>
       </div>
       <Footer />
+    </div>
     </div>
   );
 };

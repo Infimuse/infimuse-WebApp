@@ -57,7 +57,7 @@ const Banner = () => {
           <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 transition-all duration-1000">
             {banners[currentBanner].subtitle}
           </p>
-          <button className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 sm:px-6 rounded shadow-lg hover:shadow-xl transition-all duration-300">
+          <button className="bg-blue-500 hover:bg-pink-700 text-white font-bold py-2 px-4 sm:px-6 rounded shadow-lg hover:shadow-xl transition-all duration-300">
             {banners[currentBanner].buttonText}
           </button>
         </div>
