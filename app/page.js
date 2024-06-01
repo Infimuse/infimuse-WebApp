@@ -24,7 +24,6 @@ const Arrow = ({ onClick }) => (
 );
 
 const experiences = [
-
   // Sipping Hangouts
   {
     id: '10',
@@ -34,6 +33,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Sipping Hangouts',
     price: '$50',
+    rating: 4.5,
+    slotsBooked: 10,
   },
   {
     id: '14',
@@ -43,6 +44,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Sipping Hangouts',
     price: '$60',
+    rating: 4.3,
+    slotsBooked: 7,
   },
   {
     id: '15',
@@ -52,15 +55,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Sipping Hangouts',
     price: '$70',
-  },
-  {
-    id: '10',
-    image: 'https://images.pexels.com/photos/1473007/pexels-photo-1473007.jpeg',
-    title: 'Wine Tasting',
-    host: 'Vineyard',
-    status: 'Upcoming',
-    category: 'Sipping Hangouts',
-    price: '$50',
+    rating: 4.7,
+    slotsBooked: 12,
   },
   {
     id: '14',
@@ -70,6 +66,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Sipping Hangouts',
     price: '$60',
+    rating: 4.3,
+    slotsBooked: 7,
   },
   {
     id: '15',
@@ -79,6 +77,29 @@ const experiences = [
     status: 'Upcoming',
     category: 'Sipping Hangouts',
     price: '$70',
+    rating: 4.7,
+    slotsBooked: 12,
+  },{
+    id: '14',
+    image: 'https://images.pexels.com/photos/2132257/pexels-photo-2132257.jpeg',
+    title: 'Beer Brewing Workshop',
+    host: 'Local Brewery',
+    status: 'Upcoming',
+    category: 'Sipping Hangouts',
+    price: '$60',
+    rating: 4.3,
+    slotsBooked: 7,
+  },
+  {
+    id: '15',
+    image: 'https://images.pexels.com/photos/533355/pexels-photo-533355.jpeg',
+    title: 'Cocktail Mixology Class',
+    host: 'Mixology Bar',
+    status: 'Upcoming',
+    category: 'Sipping Hangouts',
+    price: '$70',
+    rating: 4.7,
+    slotsBooked: 12,
   },
   // Kids Activities
   {
@@ -89,6 +110,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Kids Activities',
     price: '$30',
+    rating: 4.2,
+    slotsBooked: 5,
   },
   {
     id: '16',
@@ -98,6 +121,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Kids Activities',
     price: '$25',
+    rating: 4.6,
+    slotsBooked: 9,
   },
   {
     id: '17',
@@ -107,33 +132,51 @@ const experiences = [
     status: 'Upcoming',
     category: 'Kids Activities',
     price: '$35',
+    rating: 4.4,
+    slotsBooked: 8,
   },
   {
-    id: '1',
-    image: 'https://images.pexels.com/photos/3026809/pexels-photo-3026809.jpeg',
-    title: 'Bake Your Own French Croissant',
-    host: 'Atelier Sucré',
+    id: '16',
+    image: 'https://images.pexels.com/photos/701014/pexels-photo-701014.jpeg',
+    title: 'Art and Craft Workshop',
+    host: 'Art Studio',
     status: 'Upcoming',
     category: 'Kids Activities',
-    price: '$100',
+    price: '$25',
+    rating: 4.6,
+    slotsBooked: 9,
   },
   {
-    id: '2',
-    image: 'https://images.pexels.com/photos/325680/pexels-photo-325680.jpeg',
-    title: 'Tagliatelle al Pesto with an Italian Master Chef',
-    host: 'CocuSocial Cooking Classes',
+    id: '17',
+    image: 'https://images.pexels.com/photos/385025/pexels-photo-385025.jpeg',
+    title: 'Kids Dance Class',
+    host: 'Dance Academy',
     status: 'Upcoming',
     category: 'Kids Activities',
-    price: '$100',
+    price: '$35',
+    rating: 4.4,
+    slotsBooked: 8,
+  },  {
+    id: '16',
+    image: 'https://images.pexels.com/photos/701014/pexels-photo-701014.jpeg',
+    title: 'Art and Craft Workshop',
+    host: 'Art Studio',
+    status: 'Upcoming',
+    category: 'Kids Activities',
+    price: '$25',
+    rating: 4.6,
+    slotsBooked: 9,
   },
   {
-    id: '3',
-    image: 'https://images.pexels.com/photos/243326/pexels-photo-243326.jpeg',
-    title: 'Pottery Wheel Basics',
-    host: 'Ceramics on 10th',
+    id: '17',
+    image: 'https://images.pexels.com/photos/385025/pexels-photo-385025.jpeg',
+    title: 'Kids Dance Class',
+    host: 'Dance Academy',
     status: 'Upcoming',
     category: 'Kids Activities',
-    price: '$100',
+    price: '$35',
+    rating: 4.4,
+    slotsBooked: 8,
   },
   // Workshops
   {
@@ -144,6 +187,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Workshops',
     price: '$80',
+    rating: 4.8,
+    slotsBooked: 15,
   },
   {
     id: '18',
@@ -153,6 +198,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Workshops',
     price: '$90',
+    rating: 4.9,
+    slotsBooked: 20,
   },
   {
     id: '19',
@@ -162,6 +209,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Workshops',
     price: '$70',
+    rating: 4.7,
+    slotsBooked: 12,
   },
   // Packages
   {
@@ -172,6 +221,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Packages',
     price: '$200',
+    rating: 4.6,
+    slotsBooked: 18,
   },
   {
     id: '20',
@@ -181,6 +232,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Packages',
     price: '$250',
+    rating: 4.9,
+    slotsBooked: 22,
   },
   {
     id: '21',
@@ -190,8 +243,10 @@ const experiences = [
     status: 'Upcoming',
     category: 'Packages',
     price: '$300',
+    rating: 4.8,
+    slotsBooked: 25,
   },
-  // // More Learn a Skill
+  // More Learn a Skill
   {
     id: '22',
     image: 'https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg',
@@ -200,6 +255,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Packages',
     price: '$120',
+    rating: 4.7,
+    slotsBooked: 14,
   },
   {
     id: '23',
@@ -209,6 +266,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Packages',
     price: '$80',
+    rating: 4.4,
+    slotsBooked: 11,
   },
   {
     id: '24',
@@ -218,8 +277,10 @@ const experiences = [
     status: 'Upcoming',
     category: 'Packages',
     price: '$50',
+    rating: 4.6,
+    slotsBooked: 13,
   },
-  // // More Unique Experiences
+  // More Unique Experiences
   // {
   //   id: '25',
   //   image: 'https://images.pexels.com/photos/1209318/pexels-photo-1209318.jpeg',
@@ -228,6 +289,8 @@ const experiences = [
   //   status: 'Upcoming',
   //   category: 'Unique Experiences',
   //   price: '$300',
+  //   rating: 4.5,
+  //   slotsBooked: 10,
   // },
   {
     id: '26',
@@ -237,6 +300,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Workshops',
     price: '$400',
+    rating: 4.9,
+    slotsBooked:    16,
   },
   {
     id: '27',
@@ -246,6 +311,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Workshops',
     price: '$500',
+    rating: 4.8,
+    slotsBooked: 19,
   },
   // More Practice
   {
@@ -256,6 +323,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Workshops',
     price: '$90',
+    rating: 4.7,
+    slotsBooked: 14,
   },
   {
     id: '29',
@@ -265,6 +334,8 @@ const experiences = [
     status: 'Upcoming',
     category: 'Practice',
     price: '$110',
+    rating: 4.5,
+    slotsBooked: 12,
   },
   // {
   //   id: '30',
@@ -274,8 +345,12 @@ const experiences = [
   //   status: 'Upcoming',
   //   category: 'Practice',
   //   price: '$130',
+  //   rating: 4.6,
+  //   slotsBooked: 15,
   // },
 ];
+
+
 
 const HomePage = () => {
   const ExploreRef = useRef(null);
