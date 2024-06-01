@@ -1,4 +1,6 @@
-import React from 'react';
+"use client"
+
+import React, { useRef } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import Navbar from '@/components/Navbar';
 import SubNavbar from '@/components/SubNavbar';
@@ -11,9 +13,13 @@ import Banner from '@/components/Banner';
 import DatePicker from '@/components/DatePicker';
 import Link from 'next/link';
 
-const Arrow = () => (
-  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-pink-500 p-2 rounded-full animate-dance">
-    <FaArrowRight className="text-white text-2xl" />
+const Arrow = ({ onClick }) => (
+  <div
+    onClick={onClick}
+    className="absolute right-0 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-gray-300 shadow-xl p-2 rounded-full cursor-pointer animate-dance"
+    style={{ right: '-50px' }} // Adjust the 'right' value to move the arrow outside the scrollable section
+  >
+    <FaArrowRight className="text-black text-xl" />
   </div>
 );
 
@@ -272,6 +278,16 @@ const experiences = [
 ];
 
 const HomePage = () => {
+  const ExploreRef = useRef(null);
+  const sippingHangoutsRef = useRef(null);
+  const kidsActivitiesRef = useRef(null);
+  const workshopsRef = useRef(null);
+  const packagesRef = useRef(null);
+
+  const scrollToEnd = (ref) => {
+    ref.current.scrollTo({ left: ref.current.scrollWidth, behavior: 'smooth' });
+  };
+
   const renderCards = (category) => {
     return experiences
       .filter((experience) => experience.category === category)
@@ -281,15 +297,10 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       <Navbar />
-      {/* <Hero /> */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <SubNavbar2 />
-        {/* <div className="mr-[150px]">
-          {/* <DatePicker /> 
-        </div> */}
-        
         <SubNavbar />
-        
+
         <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
@@ -300,18 +311,22 @@ const HomePage = () => {
               <button className="text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
-          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+          <div
+            ref={ExploreRef}
+            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
+          >
             {experiences.slice(0, 16).map((experience) => (
               <div key={experience.id}>
                 <Card {...experience} />
               </div>
             ))}
           </div>
-          <Arrow />
+          <Arrow onClick={() => scrollToEnd(ExploreRef)} />
         </section>
         
+
         <Banner />
-        
+
         <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
@@ -322,12 +337,15 @@ const HomePage = () => {
               <button className="text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
-          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+          <div
+            ref={sippingHangoutsRef}
+            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
+          >
             {renderCards('Sipping Hangouts')}
           </div>
-          <Arrow />
+          <Arrow onClick={() => scrollToEnd(sippingHangoutsRef)} />
         </section>
-        
+
         <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4 hide-scrollbar">
             <div>
@@ -338,12 +356,15 @@ const HomePage = () => {
               <button className="text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
-          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+          <div
+            ref={kidsActivitiesRef}
+            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
+          >
             {renderCards('Kids Activities')}
           </div>
-          <Arrow />
+          <Arrow onClick={() => scrollToEnd(kidsActivitiesRef)} />
         </section>
-        
+
         <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
@@ -354,12 +375,15 @@ const HomePage = () => {
               <button className="text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
-          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+          <div
+            ref={workshopsRef}
+            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
+          >
             {renderCards('Workshops')}
           </div>
-          <Arrow />
+          <Arrow onClick={() => scrollToEnd(workshopsRef)} />
         </section>
-        
+
         <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
@@ -370,10 +394,13 @@ const HomePage = () => {
               <button className="text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
-          <div className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+          <div
+            ref={packagesRef}
+            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
+          >
             {renderCards('Packages')}
           </div>
-          <Arrow />
+          <Arrow onClick={() => scrollToEnd(packagesRef)} />
         </section>
       </div>
       <Download />
