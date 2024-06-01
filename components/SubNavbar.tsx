@@ -52,7 +52,7 @@ const SubNavbar = () => {
               onMouseLeave={() => setActiveCategory(null)}
               onClick={() => handleCategoryClick(index)}
             >
-              <span className="text-2xl text-black">{category.icon}</span>
+              <span className="text-2xl text-gray-500 mb-2">{category.icon}</span>
               <span className="text-sm font-medium text-gray-700">{category.name}</span>
             </div>
           ))}
