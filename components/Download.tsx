@@ -14,7 +14,7 @@ const Download = () =>{
             track bookings, and connect with your attendees. Experience the best
             tools to enhance your event management process.
           </p>
-          <button className="flex items-center bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300 mx-auto md:mx-0">
+          <button className="flex items-center bg-[#A72C76] text-white py-2 px-4 rounded-lg hover:bg-[#12B9f3] transition duration-300 mx-auto md:mx-0">
             {/* <FaGooglePlay className="mr-2" /> */}
             Download Now
           </button>

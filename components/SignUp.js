@@ -52,7 +52,7 @@ function SignUp({ onClose }) {
             <label className="block text-sm font-medium text-gray-700">First Name</label>
             <input
               type="text"
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-[#12B9f3]"
               // value={firstName}
               // onChange={(e) => setFirstName(e.target.value)}
               required
@@ -62,7 +62,7 @@ function SignUp({ onClose }) {
             <label className="block text-sm font-medium text-gray-700">Last Name</label>
             <input
               type="text"
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-[#12B9f3]"
               // value={lastName}
               // onChange={(e) => setLastName(e.target.value)}
               required
@@ -72,7 +72,7 @@ function SignUp({ onClose }) {
             <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-[#12B9f3]"
               // value={email}
               // onChange={(e) => setEmail(e.target.value)}
               required
@@ -82,7 +82,7 @@ function SignUp({ onClose }) {
             <label className="block text-sm font-medium text-gray-700">Password</label>
             <input
               type="password"
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-[#12B9f3]"
               // value={password}
               // onChange={(e) => setPassword(e.target.value)}
               required
@@ -90,14 +90,14 @@ function SignUp({ onClose }) {
           </div>
           <button
             type="submit"
-            className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-300"
+            className="w-full bg-[#12B9f3] text-white py-2 rounded-lg hover:bg-green-600 transition duration-300"
           >
             Sign Up
           </button>
         </form>
         <p className="mt-4 text-center">
           Already have an account?{' '}
-          <span className="text-blue-500 cursor-pointer" onClick={onClose}>
+          <span className="text-[#12B9f3] cursor-pointer" onClick={onClose}>
             Sign In
           </span>
         </p>

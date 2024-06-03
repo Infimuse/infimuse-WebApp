@@ -27,7 +27,7 @@ const Card = ({ id, image, title, host, status, price, rating, slotsBooked }) =>
           <p className="text-gray-500 mb-1">Slots booked: {slotsBooked}</p>
         </div>
         <Link href={`/experience/${id}`}>
-          <button className="w-full bg-blue-500 text-white py-2 rounded-lg">
+          <button className="w-full bg-[#12B9f3] text-white py-2 rounded-lg">
             Book Now
           </button>
         </Link>

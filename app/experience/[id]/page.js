@@ -66,7 +66,7 @@ export default function ExperienceDetail({ params }) {
                   <span>{date.date}</span>
                   <div className="flex items-center space-x-4">
                     <span className="text-green-600">{date.seatsLeft} seats left</span>
-                    <button className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300" onClick={openModal}>Book</button>
+                    <button className="bg-[#A72C76] text-white py-2 px-4 rounded-lg  transition duration-300" onClick={openModal}>Book</button>
                   </div>
                 </div>
               ))}
@@ -96,7 +96,7 @@ export default function ExperienceDetail({ params }) {
         </div>
         <div className="lg:w-1/4 lg:pl-8">
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <button className="w-full bg-red-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-red-600 transition duration-300 mb-4" onClick={openModal}>
+            <button className="w-full bg-[#12B9F3] text-white font-semibold py-3 rounded-lg shadow-md  transition duration-300 mb-4" onClick={openModal}>
               Book Now
             </button>
             <button className="w-full bg-gray-100 text-gray-700 font-semibold py-3 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 mb-4">
@@ -127,7 +127,7 @@ export default function ExperienceDetail({ params }) {
               <li>Group of 10: 15% discount</li>
               <li>Group of 20: 20% discount</li>
             </ul>
-            <button className="w-full bg-blue-500 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+            <button className="w-full bg-[#12B9f3] text-white font-semibold py-3 rounded-lg shadow-md transition duration-300">
               <UsersIcon className="inline h-5 w-5 mr-2" /> Book Group Tickets
             </button>
           </div>
@@ -150,7 +150,7 @@ export default function ExperienceDetail({ params }) {
             <h2 className="text-2xl font-bold mb-2">{experience.host}</h2>
             <p className="text-sm text-gray-500 mb-2">Started hosting in {experience.hostType}</p>
             <a href="/Host" className="w-full">
-              <button className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 mt-4">
+              <button className="w-full bg-[#12B9f3] text-white font-semibold py-2 px-4 rounded-lg shadow-md  transition duration-300 mt-4">
                 See profile
               </button>
             </a>
@@ -168,7 +168,7 @@ export default function ExperienceDetail({ params }) {
             <h2 className="text-2xl font-bold mb-2">Lisa Mwangi</h2>
             <p className="text-sm text-gray-500 mb-2">Started instructing in 2024</p>
             <a href="/staff" className="w-full">
-              <button className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 mt-4">
+              <button className="w-full bg-[#12B9f3] text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 mt-4">
                 See profile
               </button>
             </a>

@@ -67,7 +67,7 @@ const BookingModal = ({ isOpen, closeModal, experience }) => {
                 <div className="mt-4">
                   <button
                     type="button"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="inline-flex justify-center rounded-md border border-transparent bg-[#12B9f3] px-4 py-2 text-sm font-medium text-white hover:bg-[#A72C76] focus:outline-none focus-visible:ring-2  focus-visible:ring-offset-2"
                     onClick={closeModal}
                   >
                     Submit

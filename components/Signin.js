@@ -52,7 +52,7 @@ function SignIn({ onClose }) {
             <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-[#12B9f3]"
               // value={email}
               // onChange={(e) => setEmail(e.target.value)}
               required
@@ -62,7 +62,7 @@ function SignIn({ onClose }) {
             <label className="block text-sm font-medium text-gray-700">Password</label>
             <input
               type="password"
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-[#12B9f3]"
               // value={password}
               // onChange={(e) => setPassword(e.target.value)}
               required
@@ -70,14 +70,14 @@ function SignIn({ onClose }) {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+            className="w-full bg-[#12B9f3] text-white py-2 rounded-lg hover:bg-[#12B9f3] transition duration-300"
           >
             Sign In
           </button>
         </form>
         <p className="mt-4 text-center">
           Don't have an account?{' '}
-          <span className="text-blue-500 cursor-pointer" onClick={() => console.log('Redirect to Sign Up')}>
+          <span className="text-[#12B9f3] cursor-pointer" onClick={() => console.log('Redirect to Sign Up')}>
             Sign Up
           </span>
         </p>
