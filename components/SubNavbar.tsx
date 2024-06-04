@@ -63,7 +63,7 @@ const SubNavbar = () => {
         {selectedCategory && (
           <div className="mt-8">
             <h2 className="text-2xl font-bold mb-4">Subcategories of {selectedCategory}</h2>
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-4">
               {categories.find(cat => cat.name === selectedCategory)?.subcategories.map((subcategory) => (
                 <span
                   key={subcategory}
