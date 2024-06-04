@@ -5,6 +5,7 @@ import Card from '@/components/Card';
 import SubNavbar from '@/components/SubNavbar';
 import Datepicker from '@/components/DatePicker';
 import SubNavbar2 from '@/components/SubNavbar2';
+import Link from 'next/link';
 import experiences from '@/data/experiences'; // Adjust the path as necessary
 
 const KidsActivities = () => {

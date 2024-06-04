@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Card from '@/components/Card';
 import SubNavbar from '@/components/SubNavbar';
 import Datepicker from '@/components/DatePicker';
+import Link from 'next/link';
 import SubNavbar2 from '@/components/SubNavbar2';
 import experiences from '@/data/experiences'; // Adjust the path as necessary
 
