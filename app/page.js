@@ -405,7 +405,7 @@ const HomePage = () => {
         <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
-              <h2 className="text-2xl font-bold">Sip n' hang</h2>
+              <h2 className="text-2xl font-bold">Sipping Hangouts</h2>
               <p className="text-gray-600">Discover great places to hang out and enjoy your favorite drinks.</p>
             </div>
             <Link href="/sipping-hangouts">

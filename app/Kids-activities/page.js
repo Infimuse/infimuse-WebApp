@@ -26,6 +26,11 @@ const KidsActivities = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {renderCards('Kids Activities')}
         </div>
+        <div className="flex justify-center mt-8">
+          <Link href="/"
+            className="text-white bg-pink-700 p-2 rounded hover:underline">Back to Home
+          </Link>
+        </div>
       </div>
       <Footer />
     </div>

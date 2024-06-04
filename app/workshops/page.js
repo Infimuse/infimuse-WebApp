@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Card from '@/components/Card';
+import Card from '@/components/Card'
+import Link from 'next/link';
 import SubNavbar from '@/components/SubNavbar';
 import Datepicker from '@/components/DatePicker';
 import SubNavbar2 from '@/components/SubNavbar2';
@@ -26,7 +27,14 @@ const Workshops = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {renderCards('Workshops')}
         </div>
+        <div className="flex justify-center mt-8">
+          <Link href="/"
+            className="text-white bg-pink-700 p-2 rounded hover:underline">Back to Home
+          </Link>
+        </div>
       </div>
+      
+
       <Footer />
     </div>
     </div>

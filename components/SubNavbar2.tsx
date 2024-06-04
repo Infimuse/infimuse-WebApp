@@ -1,7 +1,7 @@
 // components/SubNavbar2.js
 import React from 'react';
 
-const categories = ['All', 'Activties', 'learning Experiences', 'Sip & Hung','Kids Activities', 'Workshops', 'Packages', 'Experiences', ];
+const categories = ['All', 'Activties', 'Learning Experiences', 'Sip n hang','Kids Activities', 'Workshops', 'Packages' ];
 
 const SubNavbar2 = () => {
   return (
