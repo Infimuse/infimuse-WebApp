@@ -14,8 +14,8 @@ export default function Tweets(){
                 </div>
                 <div className="ml-1">
                     <p className="items-center text-white overflow-hidden">
-                        Details are important; they are worth waiting for to be true.
-                        <img className="mt-3 rounded-xl" src="https://i2.milimaj.com/i/milliyet/75/0x410/5d6576d6554281214c076887.jpg"/>
+                        Photography Workshop @ Photo Studio
+                        <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/2132257/pexels-photo-2132257.jpeg"/>
                     </p>
                     <ul className="flex justify-between mt-2">
                         <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
@@ -61,8 +61,54 @@ export default function Tweets(){
                 </div>
                 <div className="ml-1">
                     <p className="items-center text-white overflow-hidden">
-                        <span className="text-primary-tweets_hover_colors2">#ForzaHorizon5</span> Photo mode
-                        <img className="mt-3 rounded-xl" src="https://pbs.twimg.com/media/FDfHu8tVEAQAVfv?format=jpg&name=large"/>
+                        <span className="text-primary-tweets_hover_colors2">Cocktail Mixology Class</span> 
+                        <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/533355/pexels-photo-533355.jpeg"/>
+                    </p>
+                    <ul className="flex justify-between mt-2">
+                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors1 cursor-pointer">
+                                <Reply/>
+                            </div>
+                            <span>40</span>
+                        </li>
+
+                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors2 cursor-pointer">
+                                <Retweet/>
+                            </div>
+                            <span>1</span>
+                        </li>
+
+                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors3 cursor-pointer">
+                                <Like/>
+                            </div>
+                            <span>7K</span>
+                        </li>
+
+                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors1 cursor-pointer">
+                                <Share/>
+                            </div>
+                            <span>1</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div className="flex space-x-3 px-4 py-3 border-b border-primary-container_border_color">
+            <img src='https://randomuser.me/api/portraits/women/57.jpg' className="w-11 h-11 rounded-full" />
+            <div className="flex-1">
+                <div className="flex items-center text-sm space-x-2">
+                <span className="ml-1 font-bold text-white">AdemCan Certel <VerifiedBadge/></span>
+                <span className="ml-2 text-primary-gray_colors">@CertelAdemcan</span>
+                <div className="mx-2 text-primary-gray_colors">·</div>
+                <span className="text-primary-gray_colors">1h</span>
+                </div>
+                <div className="ml-1">
+                    <p className="items-center text-white overflow-hidden">
+                        <span className="text-primary-tweets_hover_colors2">#Workshops</span> Digital Marketing Workshop
+                        <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/3787329/pexels-photo-3787329.jpeg"/>
                     </p>
                     <ul className="flex justify-between mt-2">
                         <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
