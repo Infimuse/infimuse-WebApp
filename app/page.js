@@ -372,7 +372,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       <Navbar />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-4 text-black">
         {/* <SubNavbar2 /> */}
         <SubNavbar />
 
