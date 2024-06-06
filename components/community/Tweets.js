@@ -7,13 +7,13 @@ export default function Tweets(){
             <img src='https://randomuser.me/api/portraits/women/50.jpg' className="w-11 h-11 rounded-full" />
             <div className="flex-1">
                 <div className="flex items-center text-sm space-x-2">
-                <span className="ml-1 font-bold text-white">AdemCan Certel <VerifiedBadge/></span>
-                <span className="ml-2 text-primary-gray_colors">@CertelAdemcan</span>
-                <div className="mx-2 text-primary-gray_colors">·</div>
-                <span className="text-primary-gray_colors">49m</span>
+                <span className="ml-1 font-bold text-black">AdemCan Man  <VerifiedBadge/></span>
+                <span className="ml-2 text-black">@CertelAdemcan</span>
+                <div className="mx-2 text-black">·</div>
+                <span className="text-black">49m</span>
                 </div>
                 <div className="ml-1">
-                    <p className="items-center text-white overflow-hidden">
+                    <p className="items-center text-black overflow-hidden">
                         Photography Workshop @ Photo Studio
                         <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/2132257/pexels-photo-2132257.jpeg"/>
                     </p>
@@ -54,13 +54,13 @@ export default function Tweets(){
             <img src='https://randomuser.me/api/portraits/women/57.jpg' className="w-11 h-11 rounded-full" />
             <div className="flex-1">
                 <div className="flex items-center text-sm space-x-2">
-                <span className="ml-1 font-bold text-white">AdemCan Certel <VerifiedBadge/></span>
-                <span className="ml-2 text-primary-gray_colors">@CertelAdemcan</span>
-                <div className="mx-2 text-primary-gray_colors">·</div>
-                <span className="text-primary-gray_colors">1h</span>
+                <span className="ml-1 font-bold text-black">AdemCan Certel <VerifiedBadge/></span>
+                <span className="ml-2 text-black">@CertelAdemcan</span>
+                <div className="mx-2 text-black">·</div>
+                <span className="text-black">1h</span>
                 </div>
                 <div className="ml-1">
-                    <p className="items-center text-white overflow-hidden">
+                    <p className="items-center text-black overflow-hidden">
                         <span className="text-primary-tweets_hover_colors2">Cocktail Mixology Class</span> 
                         <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/533355/pexels-photo-533355.jpeg"/>
                     </p>
@@ -100,13 +100,13 @@ export default function Tweets(){
             <img src='https://randomuser.me/api/portraits/women/57.jpg' className="w-11 h-11 rounded-full" />
             <div className="flex-1">
                 <div className="flex items-center text-sm space-x-2">
-                <span className="ml-1 font-bold text-white">AdemCan Certel <VerifiedBadge/></span>
-                <span className="ml-2 text-primary-gray_colors">@CertelAdemcan</span>
-                <div className="mx-2 text-primary-gray_colors">·</div>
-                <span className="text-primary-gray_colors">1h</span>
+                <span className="ml-1 font-bold text-black">AdemCan Certel <VerifiedBadge/></span>
+                <span className="ml-2 text-black">@CertelAdemcan</span>
+                <div className="mx-2 text-black">·</div>
+                <span className="text-black">1h</span>
                 </div>
                 <div className="ml-1">
-                    <p className="items-center text-white overflow-hidden">
+                    <p className="items-center text-black overflow-hidden">
                         <span className="text-primary-tweets_hover_colors2">#Workshops</span> Digital Marketing Workshop
                         <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/3787329/pexels-photo-3787329.jpeg"/>
                     </p>

@@ -99,41 +99,7 @@ const experiences = [
     price: '$100',
     rating: 4.5,
     slotsBooked: 17,
-  },
-  // Workshops
-  {
-    id: '12',
-    image: 'https://images.pexels.com/photos/1799344/pexels-photo-1799344.jpeg',
-    title: 'Photography Workshop',
-    host: 'Photo Studio',
-    status: 'Upcoming',
-    category: 'Workshops',
-    price: '$80',
-    rating: 4.8,
-    slotsBooked: 25,
-  },
-  {
-    id: '18',
-    image: 'https://images.pexels.com/photos/3787329/pexels-photo-3787329.jpeg',
-    title: 'Digital Marketing Workshop',
-    host: 'Marketing Experts',
-    status: 'Upcoming',
-    category: 'Workshops',
-    price: '$90',
-    rating: 4.6,
-    slotsBooked: 30,
-  },
-  {
-    id: '19',
-    image: 'https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg',
-    title: 'Creative Writing Workshop',
-    host: 'Writers Guild',
-    status: 'Upcoming',
-    category: 'Workshops',
-    price: '$70',
-    rating: 4.7,
-    slotsBooked: 27,
-  },
+  },  
   // Packages
   {
     id: '13',
@@ -272,3 +238,43 @@ const experiences = [
 ];
 
 export default experiences;
+
+
+
+
+
+const Workshops = [
+  {
+    id: '12',
+    image: 'https://images.pexels.com/photos/1799344/pexels-photo-1799344.jpeg',
+    title: 'Photography Workshop',
+    host: 'Photo Studio',
+    status: 'Upcoming',
+    category: 'Workshops',
+    price: '$80',
+    rating: 4.8,
+    slotsBooked: 25,
+  },
+  {
+    id: '18',
+    image: 'https://images.pexels.com/photos/3787329/pexels-photo-3787329.jpeg',
+    title: 'Digital Marketing Workshop',
+    host: 'Marketing Experts',
+    status: 'Upcoming',
+    category: 'Workshops',
+    price: '$90',
+    rating: 4.6,
+    slotsBooked: 30,
+  },
+  {
+    id: '19',
+    image: 'https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg',
+    title: 'Creative Writing Workshop',
+    host: 'Writers Guild',
+    status: 'Upcoming',
+    category: 'Workshops',
+    price: '$70',
+    rating: 4.7,
+    slotsBooked: 27,
+  },
+]

@@ -5,8 +5,8 @@ import Tweets from '@/components/community/Tweets';
 export default function ContainerPage() {
     return(
         <>
-            <header className="sticky-top flex justify-between items-center p-4 border-b border-primary-container_border_color bg-black">
-                <span className="font-bold text-xl text-white">Home</span>
+            <header className=" flex justify-between items-center p-4 border-b border-primary-container_border_color bg-white">
+                <span className="font-bold text-xl  text-black">Home</span>
                 <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 hover:bg-gray-700 hover:bg-opacity-70 cursor-pointer">
                     <a title="Top Tweets">
                         <TopTIcon/>

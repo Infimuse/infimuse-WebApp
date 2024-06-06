@@ -2,15 +2,15 @@ import { Search, SettingsIcon, Circle, VerifiedBadge } from './İcons';
 export default function AllBox() {
     return(
         <>
-        <div className="flex items-center space-x-5 p-3 m-3 rounded-full bg-primary-search_box text-white focus-within:ring-2 focus-within:ring-primary-search_box_color focus:ring-1">
+        <div className="flex items-center space-x-5 p-3 m-3 border rounded-full bg-primary-search_box text-black focus-within:ring-2 focus-within:ring-primary-search_box_color focus:ring-1">
             <Search />
             <div>
-                <input className="bg-gray-200 focus:outline-none bg-transparent w-full" type="text" placeholder="Search Infimuse"/>
+                <input className=" focus:outline-none bg-transparent w-full" type="text" placeholder="Search Infimuse"/>
             </div>
         </div>
         <div className="items-center p-3 m-3 mt-4 bg-primary-trends_fy_color rounded-xl">
             <div>
-                <div className="tfy flex items-center justify-between text-white rounded border mb-10">
+                <div className="tfy flex items-center justify-between text-black border-gray-500 rounded border mb-10">
                     <span className="text-xl font-bold">My Communities</span>
                     <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 hover:bg-gray-700 hover:bg-opacity-70 cursor-pointer">
                     <SettingsIcon/>
@@ -81,10 +81,10 @@ export default function AllBox() {
 
             {/* ////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-            <div className="rounded border cursor-pointer">
+            <div className="rounded border border-gray-500 cursor-pointer">
                 <div className="">
                     <div className="flex flex-row items-center category_1">
-                        <span className="text-xl font-bold">Host Communities</span>
+                        <span className="text-xl font-bold text-black p-2">Host Communities</span>
                         <div className="flex space-x-1 ml-auto tt items-center justify-center w-8 h-8 rounded-full transform transition-colors duration-2 hover:bg-primary-trends_circle_hover hover:bg-opacity-25 cursor-pointer">
                             <Circle/>
                         </div>

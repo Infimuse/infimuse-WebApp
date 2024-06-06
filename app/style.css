@@ -1,9 +1,9 @@
 body {
-    background-color: black;
+    background-color: white;
 }
 
 li {
-    color: rgba(217,217,217,1.00);
+    color: rgb(0, 0, 0);
 }
 
 .sidebar-text-bold {
