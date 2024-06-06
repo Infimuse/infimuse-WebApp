@@ -154,7 +154,7 @@ export default function Tweets(){
                 <div className="ml-1">
                     <p className="items-center text-black overflow-hidden">
                         <span className="text-primary-tweets_hover_colors2">#Packages</span> Digital Marketing Workshop
-                        <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/3787329/pexels-photo-3787329.jpeg"/>
+                        <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/3182834/pexels-photo-3182834.jpeg"/>
                     </p>
                     <ul className="flex justify-between mt-2">
                         <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
