@@ -142,6 +142,52 @@ export default function Tweets(){
                 </div>
             </div>
         </div>
+        <div className="flex space-x-3 px-4 py-3 border-b border-primary-container_border_color">
+            <img src='https://randomuser.me/api/portraits/women/34.jpg' className="w-11 h-11 rounded-full" />
+            <div className="flex-1">
+                <div className="flex items-center text-sm space-x-2">
+                <span className="ml-1 font-bold text-black">ABex Jacobo <VerifiedBadge/></span>
+                <span className="ml-2 text-black">@CertelAdemcan</span>
+                <div className="mx-2 text-black">·</div>
+                <span className="text-black">1h</span>
+                </div>
+                <div className="ml-1">
+                    <p className="items-center text-black overflow-hidden">
+                        <span className="text-primary-tweets_hover_colors2">#Packages</span> Digital Marketing Workshop
+                        <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/3787329/pexels-photo-3787329.jpeg"/>
+                    </p>
+                    <ul className="flex justify-between mt-2">
+                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors1 cursor-pointer">
+                                <Reply/>
+                            </div>
+                            <span>40</span>
+                        </li>
+
+                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors2 cursor-pointer">
+                                <Retweet/>
+                            </div>
+                            <span>1</span>
+                        </li>
+
+                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors3 cursor-pointer">
+                                <Like/>
+                            </div>
+                            <span>7K</span>
+                        </li>
+
+                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors1 cursor-pointer">
+                                <Share/>
+                            </div>
+                            <span>1</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         </>
     )
 }
