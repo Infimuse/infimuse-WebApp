@@ -55,4 +55,18 @@ body {
 
 
 
+.bg-rainbow-gradient {
+  background: linear-gradient(to right, 
+    #29bba8,  /* dull red replaced by a grayish tone */
+    #67b36a,  /* dull orange replaced by light gray */
+    #b27bc5,  /* dull yellow replaced by cool gray */
+    #572f7d,  /* dull green replaced by grayish tone */
+    #b22626,  /* dull blue replaced by light gray */
+    #95a5a6); /* dull purple replaced by cool gray */
+  padding: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
 
