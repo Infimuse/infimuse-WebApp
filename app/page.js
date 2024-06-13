@@ -383,7 +383,7 @@ const HomePage = () => {
               <p className="text-gray-600">Discover fun enriching Day Hangouts around you</p>
             </div>
             <Link href="/Explore">
-              <button className="text-blue-500 py-2 px-4 rounded-lg">View More</button>
+              <button className="text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
           <div
@@ -409,7 +409,7 @@ const HomePage = () => {
               <p className="text-gray-600">Discover great places to hang out and enjoy your favorite drinks.</p>
             </div>
             <Link href="/sipping-hangouts">
-              <button className="text-blue-500 py-2 px-4 rounded-lg">View More</button>
+              <button className="text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
           <div
@@ -428,7 +428,7 @@ const HomePage = () => {
               <p className="text-gray-600">Fun and educational activities designed for kids of all ages.</p>
             </div>
             <Link href="/Kids-activities">
-              <button className="text-blue-500 py-2 px-4 rounded-lg">View More</button>
+              <button className="text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
           <div
@@ -447,7 +447,7 @@ const HomePage = () => {
               <p className="text-gray-600">Join our workshops and enhance your skills in various fields.</p>
             </div>
             <Link href="/workshops">
-              <button className="text-blue-500 py-2 px-4 rounded-lg">View More</button>
+              <button className=" text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
           <div
@@ -466,7 +466,7 @@ const HomePage = () => {
               <p className="text-gray-600">Exclusive packages to get the best value for your activities.</p>
             </div>
             <Link href="/packages">
-              <button className="text-blue-500 py-2 px-4 rounded-lg">View More</button>
+              <button className="text-black py-2 px-4 rounded-lg">View More</button>
             </Link>
           </div>
           <div

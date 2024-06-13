@@ -39,7 +39,7 @@ export default function TweetBox() {
                        </div>
                    </div>
                    <div className="bg-primary-button text-black rounded-full shadow-lg justify-center py-2 px-4 transform transition-colors duration-500 hover:bg-primary-button_hover">
-                   <button className="button-tweet font-bold">Tweet</button>
+                   {/* <button className="button-tweet font-bold">Tweet</button> */}
                    </div>
                </div>
         </div>
