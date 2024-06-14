@@ -40,7 +40,7 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
                 <FaUsers className="inline mr-1"/>{slotsBooked} Booked
               </p>
             </div>
-            <Link href={`/book/${id}`}>
+            <Link href={`/experience/${id}`}>
               <button className="bg-[#12B9f3] text-white py-2 px-4 rounded-lg">
                 Book Now
               </button>
