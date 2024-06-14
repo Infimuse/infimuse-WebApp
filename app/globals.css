@@ -57,10 +57,10 @@ body {
 
 .bg-rainbow-gradient {
   background: linear-gradient(to right, 
-    #2ECC71,  /* dull red replaced by a grayish tone */
+    /* #2ECC71,   */
     #6ed5cd,  /* dull orange replaced by light gray */
    /* dull blue replaced by light gray */
-    #9B59B6); /* dull purple replaced by cool gray */
+    #A72C76); /* dull purple replaced by cool gray */
   padding: 8px;
   cursor: pointer;
   border-radius: 4px;

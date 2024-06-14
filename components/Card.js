@@ -35,7 +35,9 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
             <span>Sat, 26 Jun</span>
             <FaClock className="inline ml-2 mr-1" />
             <span>06:00 PM</span>
+            
           </span>
+          
           <div className="flex justify-between items-center mt-2">
             <div>
               <p className="text-gray-500 text-sm">
