@@ -45,7 +45,7 @@ const Header = () => {
         <Link href="/communities" class="bg-rainbow-gradient p-4 cursor-pointer rounded-md text-white font-semibold">
           Communities
         </Link>
-        <p className="hidden md:inline cursor-pointer bg-[#A72C76] p-2 rounded-md text-white">Become a host</p>
+        <p className="hidden md:inline cursor-pointer bg-[#A72C76] p-2 font-bold rounded-md text-white">Become a host</p>
         {/* <FaGlobe className="h-6 cursor-pointer" /> */}
         <div className="relative">
           <div
