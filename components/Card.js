@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { FaStar, FaCalendarAlt, FaMapMarkerAlt, FaDollarSign, FaUsers } from 'react-icons/fa';
+import { FaStar, FaCalendarAlt, FaMapMarkerAlt, FaDollarSign, FaUsers, FaClock } from 'react-icons/fa';
 
 const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
   const ratingStars = (
@@ -20,7 +20,7 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
           <h3 className="text-lg font-semibold overflow-hidden overflow-ellipsis whitespace-nowrap">{title}</h3>
           <p className="text-gray-500 overflow-hidden overflow-ellipsis whitespace-nowrap mb-1">Hosted by {host}</p>
           
-          <div className="flex justify-between items-center text-sm text-gray-500 ">
+          <div className="flex justify-between items-center text-sm text-gray-500">
             <div className="flex items-center">
               <FaMapMarkerAlt className="mr-1" />
               <span>Nairobi</span>
@@ -30,7 +30,12 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
               <span className="ml-2">{rating}(5)</span>
             </div>
           </div>
-          <span className="text-gray-500 block mt-1"><FaCalendarAlt className="inline mr-1" />Sat, 26 Jun 06:00 PM</span>
+          <span className="text-gray-500 block mt-1 flex items-center">
+            <FaCalendarAlt className="inline mr-1" />
+            <span>Sat, 26 Jun</span>
+            <FaClock className="inline ml-2 mr-1" />
+            <span>06:00 PM</span>
+          </span>
           <div className="flex justify-between items-center mt-2">
             <div>
               <p className="text-gray-500 text-sm">
