@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "./style.css";
-// import Navbar from "@/components/Navbar";
-// import { Provider } from 'react-redux';
-// import store from '@/redux/store';
 import Head from 'next/head';
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,13 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-          <Head>
+      <Head>
         <link rel="icon" href="/favicon.ico" />
-        {/* You can add other head elements here */}
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
       </Head>
-          {/* <Provider store={store}> */}
       <body className={inter.className}>{children}</body>
-      {/* </Provider> */}
     </html>
   );
 }

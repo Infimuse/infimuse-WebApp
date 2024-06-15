@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { FaFootballBall, FaBasketballBall, FaSwimmer, FaHiking, FaCampground, FaBook, FaPaintBrush, FaRobot, FaLaptopCode, FaMusic, FaDumbbell, FaTheaterMasks, FaCamera, FaLeaf, FaTshirt, FaArrowRight } from 'react-icons/fa';
 import { GiCookingPot, GiStairsGoal, GiMountainClimbing, GiChemicalDrop } from 'react-icons/gi';
 import { MdPsychology, MdHealthAndSafety, MdBiotech } from 'react-icons/md';
+import { IoIosArrowForward } from "react-icons/io";
+
 
 const categories = [
   { name: 'Sports', icon: <FaFootballBall className="text-green-500" />, subcategories: ['Football', 'Basketball', 'Tennis', 'Swimming'] },
@@ -58,7 +60,7 @@ const SubNavbar = () => {
           ))}
         </div>
         <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-white">
-          <FaArrowRight className="text-gray-800 text-2xl animate-dance" />
+          <IoIosArrowForward className="text-gray-800 text-2xl animate-dance" />
         </div>
         {selectedCategory && (
           <div className="mt-8">

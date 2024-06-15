@@ -1,6 +1,8 @@
 import { TopTIcon } from '@/components/community/İcons';
 import TweetBox from '@/components/community/TweetBox';
 import Tweets from '@/components/community/Tweets';
+import Categories from '@/components/community/categories';
+import  Location from '@/components/community/location';
 
 export default function ContainerPage() {
     return(
@@ -14,9 +16,15 @@ export default function ContainerPage() {
                 </div>
             </header>
             <div className="flex space-x-4 px-5 py-2 border-b border-primary-container_border_color">
-                    <img className="rounded-full h-11 w-11 mt-1" src="https://randomuser.me/api/portraits/women/57.jpg"/>
-                    <TweetBox/>
+                    {/* <img className="rounded-full h-11 w-11 mt-1" src="https://randomuser.me/api/portraits/women/57.jpg"/> */}
+                    {/* <TweetBox/> */}
+                    <Categories/>
             </div>
+
+            <div className="flex  px-8 py-6 border-b ">
+                    <Location/>
+            </div>
+
             <div>
                     <Tweets/>
             </div>

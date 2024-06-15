@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useRef } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+// import { FaArrowRight } from 'react-icons/fa';
+import { IoIosArrowForward } from "react-icons/io";
 import Navbar from '@/components/Navbar';
 import SubNavbar from '@/components/SubNavbar';
 import Footer from '@/components/Footer';
@@ -19,7 +20,7 @@ const Arrow = ({ onClick }) => (
     className="absolute right-0 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-gray-300 shadow-xl p-2 rounded-full cursor-pointer animate-dance"
     style={{ right: '-50px' }} // Adjust the 'right' value to move the arrow outside the scrollable section
   >
-    <FaArrowRight className="text-black text-xl" />
+    <IoIosArrowForward  className="text-black text-xl" />
   </div>
 );
 

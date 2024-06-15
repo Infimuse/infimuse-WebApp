@@ -56,15 +56,44 @@ body {
 
 
 .bg-rainbow-gradient {
-  background: linear-gradient(to right, 
-    /* #2ECC71,   */
-    #6ed5cd,  /* dull orange replaced by light gray */
-   /* dull blue replaced by light gray */
-    #A72C76); /* dull purple replaced by cool gray */
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 4px;
+  background: radial-gradient(circle,
+    #4C84FF,
+    #36D1DC,
+    #FF6F61);
+  border: none;
   color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-weight: bold;
+  font-family: 'Open Sans', sans-serif; /* Example font to match Infimuse */
 }
 
+
+/* globals.css or style.css */
+
+/* Apply Montserrat for primary usage */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Use Poppins for secondary usage */
+h2, h3, h4, h5, h6, .secondary-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Use Pacifico for accents */
+.accent-font {
+  font-family: 'Pacifico', cursive;
+}
+
+
+.location-slider {
+  margin-top: 20px;
+  padding: 0 20px;
+  width: 100%;
+}
