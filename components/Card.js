@@ -32,7 +32,7 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
               <span className="ml-2">{rating}(5)</span>
             </div>
           </div>
-          <span className="text-gray-500 block mt-1 flex items-center">
+          <span className="text-gray-500 block mt-1 items-center">
             <FaCalendarAlt className="inline mr-1" />
             <span className='mr-4'>Sat, 26 Jun</span>
             {/* <FaClock className="inline ml-2 mr-1" /> */}
