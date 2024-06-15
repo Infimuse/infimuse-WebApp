@@ -2,6 +2,8 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { FaStar, FaCalendarAlt, FaMapMarkerAlt, FaDollarSign, FaUsers, FaClock } from 'react-icons/fa';
+import { FaMoneyBillAlt } from "react-icons/fa";
+
 
 const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
   const ratingStars = (
@@ -32,8 +34,8 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
           </div>
           <span className="text-gray-500 block mt-1 flex items-center">
             <FaCalendarAlt className="inline mr-1" />
-            <span>Sat, 26 Jun</span>
-            <FaClock className="inline ml-2 mr-1" />
+            <span className='mr-4'>Sat, 26 Jun</span>
+            {/* <FaClock className="inline ml-2 mr-1" /> */}
             <span>06:00 PM</span>
             
           </span>
@@ -41,7 +43,7 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
           <div className="flex justify-between items-center mt-2">
             <div>
               <p className="text-gray-500 text-sm">
-                KE {price} Ksh
+                <FaMoneyBillAlt className="inline mr-1"/> {price} Ksh
               </p>
               <p className="text-gray-500 text-sm">
                 <FaUsers className="inline mr-1"/>{slotsBooked} Booked
