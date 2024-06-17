@@ -57,9 +57,12 @@ body {
 
 .bg-rainbow-gradient {
   background: radial-gradient(circle,
-    #4C84FF,
-    #36D1DC,
-    #FF6F61);
+    #FF5733,
+    #FFC300,
+    #DAF7A6,
+    #33FF57,
+    #33CFFF,
+    #8D33FF);
   border: none;
   color: white;
   padding: 12px 24px;
