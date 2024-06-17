@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { FaFootballBall, FaBasketballBall, FaSwimmer, FaHiking, FaCampground, FaBook, FaPaintBrush, FaRobot, FaLaptopCode, FaMusic, FaDumbbell, FaTheaterMasks, FaCamera, FaLeaf, FaTshirt, FaArrowRight } from 'react-icons/fa';
 import { GiCookingPot, GiStairsGoal, GiMountainClimbing, GiChemicalDrop } from 'react-icons/gi';
 import { MdPsychology, MdHealthAndSafety, MdBiotech } from 'react-icons/md';
-import { IoIosArrowForward } from "react-icons/io";
-
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const categories = [
   { name: 'Sports', icon: <FaFootballBall className="text-green-500" />, subcategories: ['Football', 'Basketball', 'Tennis', 'Swimming'] },
@@ -36,16 +35,29 @@ const categories = [
 const SubNavbar = () => {
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const handleCategoryClick = (index: number) => {
     setSelectedCategory(categories[index].name);
     setActiveCategory(index);
   };
 
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="bg-white py-4  sticky">
+    <div className="bg-white py-4 sticky">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-4">
-        <div className="relative flex space-x-8 overflow-x-auto hide-scroll-bar p-2">
+        <div className="relative flex space-x-8 overflow-x-auto hide-scroll-bar p-2" ref={containerRef}>
           {categories.map((category, index) => (
             <div
               key={index}
@@ -59,8 +71,11 @@ const SubNavbar = () => {
             </div>
           ))}
         </div>
-        <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-white">
-          <IoIosArrowForward className="text-gray-800 text-2xl animate-dance" />
+        <div className="absolute left-2 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-white" onClick={scrollLeft}>
+          <IoIosArrowBack className="text-gray-800 text-2xl cursor-pointer" />
+        </div>
+        <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-white" onClick={scrollRight}>
+          <IoIosArrowForward className="text-gray-800 text-2xl cursor-pointer" />
         </div>
         {selectedCategory && (
           <div className="mt-8">
