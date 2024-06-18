@@ -56,7 +56,7 @@ body {
 
 
 .bg-rainbow-gradient {
-  background: linear-gradient(45deg, #FF5733, #FFBD33, #75FF33, #33FFBD, #3380FF, #8333FF);
+  background: linear-gradient(45deg,  #33FFBD, #FFC0CB, #FFA500, #A020F0);
   background-size: 400% 400%;
   color: white;
   padding: 12px 24px;
