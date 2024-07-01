@@ -24,7 +24,7 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked, duration }) 
           <div className="flex justify-between items-center text-sm text-gray-500">
             <div className="flex items-center">
               <FaMapMarkerAlt className="mr-1" />
-              <span>Nairobi</span>
+              <span>Nairobi Westlands</span>
             </div>
             <div className="flex items-center">
               {ratingStars}
