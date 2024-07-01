@@ -381,7 +381,7 @@ const HomePage = () => {
           <div className="flex justify-between items-center mb-4">
             <div>
               <h2 className="text-2xl font-bold">Explore and Connect</h2>
-              <p className="text-gray-600">Discover fun enriching Day Hangouts around you</p>
+              <p className="text-gray-600">Discover fun Learning Experiences & Group Hangouts around you</p>
             </div>
             <Link href="/Explore">
               <button className="text-black py-2 px-4 rounded-lg underline">View More</button>

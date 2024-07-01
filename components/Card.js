@@ -34,8 +34,8 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked, duration }) 
           <div className="mt-1">
             <div className="text-gray-500 flex items-center">
               <FaCalendarAlt className="inline mr-1" />
-              <span className='mr-4'>Sat, 26 Jun</span>
-              <span>06:00 PM</span>
+              <span className='mr-4'>Sat, 26 Jun 06:00 PM</span>
+              {/* <span>06:00 PM</span> */}
             </div>
             <div className="text-gray-500 flex items-center">
               <FaClock className="inline mr-1" />
@@ -48,7 +48,7 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked, duration }) 
                 <FaMoneyBillAlt className="inline mr-1"/> {price} Ksh
               </p>
               <p className="text-gray-500 text-sm">
-                <FaUsers className="inline mr-1"/>{slotsBooked} Booked
+                <FaUsers className="inline mr-1"/>{slotsBooked} Slots Left
               </p>
             </div>
             <Link href={`/experience/${id}`}>
