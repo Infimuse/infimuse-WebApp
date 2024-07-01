@@ -14,7 +14,7 @@ export default function HomePage() {
           <main className="flex-1 flex flex-col  border-r border-l border-b border-primary-container_border_color bg-white">
               <MainContent/>         
           </main>
-          <aside className="bg-white w-350">
+          <aside className="bg-white">
               <RightSidebar/>
           </aside>
       </div>

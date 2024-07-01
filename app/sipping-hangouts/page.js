@@ -23,7 +23,7 @@ const SippingHangouts = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <SubNavbar2 />
         <SubNavbar />
-        <div className="px-[200px]">
+        <div className="px-[200px] mt-[-40px]">
         <Location />
         </div>
         <Datepicker />
