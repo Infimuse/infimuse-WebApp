@@ -9,9 +9,10 @@ export default function Location() {
     setDistance(newValue);
   };
 
+  // Todo: Add a location slider to filter communities by distance
   return (
     <div className="location-slider">
-      <h1 className=' text-black mb-2'>Find Communities by location</h1>
+      {/* <h1 className=' text-black mb-2'>Find Communities by location</h1> */}
       <Slider
         value={distance}
         onChange={handleDistanceChange}
@@ -24,9 +25,9 @@ export default function Location() {
           { value: 60, label: '60 km' },
         ]}
       />
-      <div className=' text-black mb-2'>
+      {/* <div className='text-black mb-2'>
         Selected distance: {distance[0]} km - {distance[1]} km
-      </div>
+      </div> */}
     </div>
   );
 }

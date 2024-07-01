@@ -37,15 +37,15 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked, duration }) 
               <span className='mr-4'>Sat, 26 Jun 06:00 PM</span>
               {/* <span>06:00 PM</span> */}
             </div>
-            <div className="text-gray-500 flex items-center">
+            <div className="text-gray-500 flex items-center text-sm">
               <FaClock className="inline mr-1" />
               <span>100hrs</span>
             </div>
           </div>
           <div className="flex justify-between items-center">
             <div>
-              <p className="text-gray-500 text-sm">
-                <FaMoneyBillAlt className="inline mr-1"/> {price} Ksh
+              <p className="text-gray-500">
+                <FaMoneyBillAlt className="inline mr-1"/> Ksh {price} 
               </p>
               <p className="text-gray-500 text-sm">
                 <FaUsers className="inline mr-1"/>{slotsBooked} Slots Left

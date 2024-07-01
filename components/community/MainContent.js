@@ -21,11 +21,11 @@ export default function ContainerPage() {
                     <Categories/>
             </div>
 
-            <div className="flex  px-8 py-6 border-b ">
+            <div className="flex  px-[300px] py-6 border-b ">
                     <Location/>
             </div>
 
-            <div>
+            <div className='px-[300px]'>
                     <Tweets/>
             </div>
         </>

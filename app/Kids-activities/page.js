@@ -7,6 +7,8 @@ import Datepicker from '@/components/DatePicker';
 import SubNavbar2 from '@/components/SubNavbar2';
 import Link from 'next/link';
 import experiences from '@/data/experiences'; // Adjust the path as necessary
+import Location from '@/components/community/location';
+
 
 const KidsActivities = () => {
   const renderCards = (category) => {
@@ -21,7 +23,10 @@ const KidsActivities = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <SubNavbar2 />
         <SubNavbar />
-        <Datepicker />
+        <div className="px-[200px]">
+        <Location />
+        </div>
+                <Datepicker />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <h2 className="text-2xl font-bold mb-4">Kids Activities</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

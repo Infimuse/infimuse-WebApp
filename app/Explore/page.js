@@ -7,6 +7,7 @@ import Link from 'next/link';
 import SubNavbar from '@/components/SubNavbar';
 import Datepicker from '@/components/DatePicker';
 import SubNavbar2 from '@/components/SubNavbar2';
+import Location from '@/components/community/location';
 
 
 const Explore = () => {
@@ -16,6 +17,9 @@ const Explore = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <SubNavbar2 />
         <SubNavbar />
+        <div className="px-[200px]">
+        <Location />
+        </div>
         <Datepicker />
         {/* <SubNavbar2 /> */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">

@@ -9,9 +9,9 @@ export default function HomePage() {
   return(
   <div className="bg-white ">
         <Navbar/>
-      <div className="min-h-screen mx-auto max-w-7xl flex bg-white ">
+      <div className="min-h-screen mx-auto  flex bg-white ">
               <Sidebar/>
-          <main className="flex-1 flex flex-col border-r border-l border-b border-primary-container_border_color bg-white">
+          <main className="flex-1 flex flex-col  border-r border-l border-b border-primary-container_border_color bg-white">
               <MainContent/>         
           </main>
           <aside className="bg-white w-350">
