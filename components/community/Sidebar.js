@@ -18,19 +18,19 @@ export default function SideBar() {
   const [isMyCommunitiesOpen, setIsMyCommunitiesOpen] = useState(false);
 
   return (
-    <div className="flex flex-col w-275 justify-between px-3 bg-white text-black h-full">
+    <div className="flex flex-col w-300 justify-between px-3 bg-white text-black h-full">
       <div>
         {/* <Link href="/" className="flex items-center justify-center w-12 h-12 rounded-full transform transition-colors duration-200 hover:bg-primary-twitter_icon hover:bg-opacity-70 mt-1 mb-5 cursor-pointer">
                     <Image src={logo} height={100} width={100} alt="logo" objectFit="contain" objectPosition="left" />
                 </Link> */}
         <nav className="mb-5">
           <ul>
-            <a href="">
+            {/* <a href="">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
                 <MdHome />
                 <li className="ml-4 sidebar-text-bold font-bold">Home</li>
               </div>
-            </a>
+            </a> */}
             <a href="">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
                 <BiHash />

@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { FaSearch, FaBars, FaUserCircle, FaGlobe } from 'react-icons/fa';
-import logo from '@/public/assets/logo.png';
+import logo from '@/public/assets/InfiMuse G&T.png';
 import SignIn from './Signin';
 import SignUp from './SignUp';
 import { ToastContainer } from 'react-toastify';

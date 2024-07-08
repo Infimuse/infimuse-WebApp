@@ -25,12 +25,12 @@ export default function Tweets(){
                             <span>20</span>
                         </li>
 
-                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                        {/* <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
                             <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors2 cursor-pointer">
                                 <Retweet/>
                             </div>
                             <span>5</span>
-                        </li>
+                        </li> */}
 
                         <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
                             <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors3 cursor-pointer">

@@ -10,7 +10,7 @@ const categories = [
   { name: 'Sip n hang', path: '/sipping-hangouts' },
   { name: 'Kids Activities', path: '/Kids-activities' },
   { name: 'Workshops', path: '/workshops' },
-  { name: 'Packages', path: '/packages' }
+  // { name: 'Packages', path: '/packages' }
 ];
 
 const SubNavbar2 = () => {
