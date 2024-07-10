@@ -18,6 +18,12 @@ export default function Tweets(){
                         <img className="mt-3 rounded-xl" src="https://images.pexels.com/photos/2132257/pexels-photo-2132257.jpeg"/>
                     </p>
                     <ul className="flex justify-between mt-2">
+                    <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors3 cursor-pointer">
+                                <Like/>
+                            </div>
+                            <span>9,9K</span>
+                        </li>
                         <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
                             <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors1 cursor-pointer">
                                 <Reply/>
@@ -32,12 +38,7 @@ export default function Tweets(){
                             <span>5</span>
                         </li> */}
 
-                        <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
-                            <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors3 cursor-pointer">
-                                <Like/>
-                            </div>
-                            <span>9,9K</span>
-                        </li>
+                       
 
                         <li className="flex items-center space-x-3 text-primary-gray_colors text-sm group">
                             <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 group-hover:bg-primary-tweets_hover_colors1 cursor-pointer">

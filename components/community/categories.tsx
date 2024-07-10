@@ -55,7 +55,7 @@ const SubNavbar = () => {
   };
 
   return (
-    <div className="bg-white py-4 sticky">
+    <div className="bg-white py-4 sticky text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-4">
         <div className="relative flex space-x-8 overflow-x-auto hide-scroll-bar p-2" ref={containerRef}>
           {categories.map((category, index) => (

@@ -373,6 +373,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       <Navbar />
+      <Banner />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-4 text-black">
         {/* <SubNavbar2 /> */}
         <SubNavbar />
@@ -401,7 +402,7 @@ const HomePage = () => {
         </section>
         
 
-        <Banner />
+
 
         <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">

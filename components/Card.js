@@ -10,7 +10,7 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked, duration }) 
   );
 
   return (
-    <div className="block bg-white rounded-lg shadow-md overflow-hidden" style={{ minWidth: '250px', height: 'auto' }}>
+    <div className="block bg-white rounded-lg shadow-md overflow-hidden" style={{ minWidth: '300px', height: 'auto' }}>
       <Link href={`/experience/${id}`}>
         <div className="relative w-full h-40">
           <Image src={image} alt={title} layout="fill" objectFit="cover" />
@@ -37,10 +37,10 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked, duration }) 
               <span className='mr-4'>Sat, 26 Jun 06:00 PM</span>
               {/* <span>06:00 PM</span> */}
             </div>
-            <div className="text-gray-500 flex items-center text-sm">
+            {/* <div className="text-gray-500 flex items-center text-sm">
               <FaClock className="inline mr-1" />
               <span>100hrs</span>
-            </div>
+            </div> */}
           </div>
           <div className="flex justify-between items-center">
             <div>
