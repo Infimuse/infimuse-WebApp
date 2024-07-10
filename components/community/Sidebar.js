@@ -18,7 +18,7 @@ export default function SideBar() {
   const [isMyCommunitiesOpen, setIsMyCommunitiesOpen] = useState(false);
 
   return (
-    <div className="flex flex-col justify-between px-3 bg-white text-black h-full ">
+    <div className="flex flex-col justify-between px-3 w-[300px] bg-white text-black h-full ">
       <div>
         {/* <Link href="/" className="flex items-center justify-center w-12 h-12 rounded-full transform transition-colors duration-200 hover:bg-primary-twitter_icon hover:bg-opacity-70 mt-1 mb-5 cursor-pointer">
                     <Image src={logo} height={100} width={100} alt="logo" objectFit="contain" objectPosition="left" />
@@ -110,10 +110,10 @@ export default function SideBar() {
             </div>
           </ul>
         </nav>
-        {/* <button className="bg-[#12B9f3] text-white rounded-full shadow-lg py-3 px-8 w-90 transform transition-colors duration-500 hover:bg-primary-button_hover font-bold sidebar-text-bold">
-          Tweet
-        </button> */}
-        <div className="flex justify-between items-center mb-7 mt-6 hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
+        <button className="bg-[#12B9f3] text-white rounded-full shadow-lg py-3 px-8 w-90 transform transition-colors duration-500 hover:bg-primary-button_hover font-bold sidebar-text-bold">
+          Sign In
+        </button>
+        {/* <div className="flex justify-between items-center mb-7 mt-6 hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
           <div className="h-11 w-11">
             <img
               className="rounded-full"
@@ -132,7 +132,7 @@ export default function SideBar() {
             <div className="w-1 h-1 bg-white rounded-full" />
             <div className="w-1 h-1 bg-white rounded-full" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
