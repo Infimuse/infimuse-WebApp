@@ -42,7 +42,7 @@ const Header = () => {
 
       {/* Right */}
       <div className="flex items-center justify-end space-x-4 text-gray-500">
-        <Link href="/communities" class=" flex gap-1 bg-rainbow-gradient p-2 cursor-pointer rounded-md text-white font-semibold">
+        <Link href="/communities" class=" flex gap-1 bg-rainbow-gradient p-2 cursor-pointer rounded-full text-white font-semibold">
         <FaSearch className="h-6 cursor-pointer" />
           Communities
         </Link>

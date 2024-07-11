@@ -51,14 +51,14 @@ const Banner = () => {
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 sm:px-10 md:px-20">
-          <h1 className="text-lg sm:text-xl md:text-3xl font-bold mb-2 sm:mb-4 transition-all duration-1000">
+          <h1 className="text-lg sm:text-xl md:text-3xl font-bold mb-2 sm:mb-4 transition-all duration-1000 rounded-full">
             {banners[currentBanner].title}
           </h1>
-          <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 transition-all duration-1000">
+          <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 transition-all duration-1000 rounded-full">
             {banners[currentBanner].subtitle}
           </p>
           <button 
-            className={`font-bold py-2 px-4 sm:px-6 rounded shadow-lg hover:shadow-xl transition-all duration-300 ${
+            className={`font-bold py-2 px-4 sm:px-6  shadow-lg hover:shadow-xl transition-all duration-300 rounded-full ${
               banners[currentBanner].buttonText === 'Communities' ? 'bg-rainbow-gradient' : 'bg-[#12B9f3] hover:bg-pink-700'
             } text-white`}
           >

@@ -32,14 +32,30 @@ const categories = [
   { name: 'Music', icon: <FaMusic className="text-red-600" />, subcategories: ['Instrumental', 'Vocal', 'Theory'] },
 ];
 
-const SubNavbar = () => {
-  const [activeCategory, setActiveCategory] = useState<number | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleCategoryClick = (index: number) => {
-    setSelectedCategory(categories[index].name);
-    setActiveCategory(index);
+const SubNavbar = () => {
+  const [selectedCategories, setSelectedCategories] = useState(new Set());
+  const [activeSubcategories, setActiveSubcategories] = useState(new Set());
+  const containerRef = useRef(null);
+
+  const handleCategoryClick = (category: unknown) => {
+    const newSelection = new Set(selectedCategories);
+    if (newSelection.has(category)) {
+      newSelection.delete(category);
+    } else {
+      newSelection.add(category);
+    }
+    setSelectedCategories(newSelection);
+  };
+
+  const handleSubcategoryClick = (subcategory: unknown) => {
+    const newActiveSubcategories = new Set(activeSubcategories);
+    if (newActiveSubcategories.has(subcategory)) {
+      newActiveSubcategories.delete(subcategory);
+    } else {
+      newActiveSubcategories.add(subcategory);
+    }
+    setActiveSubcategories(newActiveSubcategories);
   };
 
   const scrollLeft = () => {
@@ -54,6 +70,8 @@ const SubNavbar = () => {
     }
   };
 
+  const selectedSubcategories = Array.from(selectedCategories).flatMap(cat => categories.find(c => c.name === cat)?.subcategories || []);
+
   return (
     <div className="bg-white py-4 sticky">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-4">
@@ -61,13 +79,11 @@ const SubNavbar = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="relative flex flex-col items-center cursor-pointer hover:text-pink-600 transition duration-150 ease-in-out"
-              onMouseEnter={() => setActiveCategory(index)}
-              onMouseLeave={() => setActiveCategory(null)}
-              onClick={() => handleCategoryClick(index)}
+              className={`relative flex flex-col items-center cursor-pointer transition duration-150 ease-in-out ${selectedCategories.has(category.name) ? 'text-[#BB2460]' : 'text-gray-500'}`}
+              onClick={() => handleCategoryClick(category.name)}
             >
-              <span className="text-2xl text-gray-500 mb-2">{category.icon}</span>
-              <span className="text-sm font-medium text-gray-700">{category.name}</span>
+              <span className="text-2xl mb-2">{category.icon}</span>
+              <span className="text-sm font-medium">{category.name}</span>
             </div>
           ))}
         </div>
@@ -77,14 +93,15 @@ const SubNavbar = () => {
         <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex justify-center items-center bg-white" onClick={scrollRight}>
           <IoIosArrowForward className="text-gray-800 text-2xl cursor-pointer" />
         </div>
-        {selectedCategory && (
+        {selectedSubcategories.length > 0 && (
           <div className="mt-8">
-            <h2 className="text-2xl font-bold mb-4">Subcategories of {selectedCategory}</h2>
+            <h2 className="text-2xl font-bold mb-4 ">Subcategories</h2>
             <div className="flex flex-wrap gap-2 mb-4">
-              {categories.find(cat => cat.name === selectedCategory)?.subcategories.map((subcategory) => (
+              {selectedSubcategories.map(subcategory => (
                 <span
                   key={subcategory}
-                  className="px-4 py-2 bg-gray-200 rounded-full cursor-pointer text-sm sm:text-base"
+                  onClick={() => handleSubcategoryClick(subcategory)}
+                  className={`px-4 py-2 rounded-full cursor-pointer text-sm sm:text-base ${activeSubcategories.has(subcategory) ? 'bg-[#BB2460] text-white' : 'bg-gray-100'}`}
                 >
                   {subcategory}
                 </span>
