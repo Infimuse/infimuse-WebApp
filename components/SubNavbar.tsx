@@ -79,11 +79,11 @@ const SubNavbar = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className={`relative flex flex-col items-center cursor-pointer transition duration-150 ease-in-out ${selectedCategories.has(category.name) ? 'text-[#BB2460]' : 'text-gray-500'}`}
+              className={`relative flex flex-col items-center cursor-pointer transition duration-150 ease-in-out ${selectedCategories.has(category.name) ? 'text-[#BB2460]' : 'text-gray-800'}`}
               onClick={() => handleCategoryClick(category.name)}
             >
               <span className="text-2xl mb-2">{category.icon}</span>
-              <span className="text-sm font-medium text-black">{category.name}</span>
+              <span className="text-sm font-medium">{category.name}</span>
             </div>
           ))}
         </div>
@@ -95,7 +95,7 @@ const SubNavbar = () => {
         </div>
         {selectedSubcategories.length > 0 && (
           <div className="mt-8">
-            <h2 className="text-2xl font-bold mb-4 ">Subcategories</h2>
+            <h2 className="text-2xl font-bold mb-4 ">SubCategories</h2>
             <div className="flex flex-wrap gap-2 mb-4">
               {selectedSubcategories.map(subcategory => (
                 <span

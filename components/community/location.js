@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState } from 'react';
 import Slider from '@mui/material/Slider';
 
@@ -9,10 +10,8 @@ export default function Location() {
     setDistance(newValue);
   };
 
-  // Todo: Add a location slider to filter communities by distance
   return (
     <div className="location-slider">
-      {/* <h1 className=' text-black mb-2'>Find Communities by location</h1> */}
       <Slider
         value={distance}
         onChange={handleDistanceChange}
@@ -24,6 +23,17 @@ export default function Location() {
           { value: 2, label: '2 km' },
           { value: 60, label: '60 km' },
         ]}
+        sx={{
+          '& .MuiSlider-thumb': {
+            color: '#bb2460', // Changes the thumb color to red
+          },
+          '& .MuiSlider-track': {
+            color: '#bb2460', // Changes the track color to red
+          },
+          '& .MuiSlider-rail': {
+            color: '#bbb' // Changes the rail color to a lighter grey
+          }
+        }}
       />
       <div className='text-black mt-[-18px] mb-4 text-center'>
         {distance[0]} km - {distance[1]} km
