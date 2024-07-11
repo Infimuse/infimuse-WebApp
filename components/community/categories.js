@@ -92,7 +92,7 @@ const SubNavbar = () => {
         </div>
         {selectedSubcategories.length > 0 && (
           <div className="mt-8">
-            <h2 className="text-2xl font-bold mb-4 ">SubCategories</h2>
+            <h2 className="text-2xl font-bold mb-4 ">Subcategories</h2>
             <div className="flex flex-wrap gap-2 mb-4">
               {selectedSubcategories.map(subcategory => (
                 <span
