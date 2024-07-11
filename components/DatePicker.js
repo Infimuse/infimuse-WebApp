@@ -18,11 +18,11 @@ const DatePickerComponent = () => {
   return (
     <div className="flex items-center justify-center mt-2 md:mt-0 text-black w-full">
       <div className="flex items-center  rounded-lg px-4 py-2 w-full md:w-96 lg:w-120 relative">
-        <button className="px-4 py-2 mx-1 rounded-md bg-gray-200 hover:bg-gray-300 whitespace-nowrap">This Week</button>
-        <button className="px-4 py-2 mx-1 rounded-md bg-gray-200 hover:bg-gray-300 whitespace-nowrap">Next Week</button>
+        <button className="px-4 py-2 mx-1  bg-gray-100 hover:bg-[#bb2460] hover:text-white whitespace-nowrap rounded-full">This Week</button>
+        <button className="px-4 py-2 mx-1 rounded-full bg-gray-100  hover:bg-[#bb2460] hover:text-white whitespace-nowrap">Next Week</button>
         <div className="relative mx-1">
           <button
-            className="flex items-center px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 whitespace-nowrap"
+            className="flex items-center px-4 py-2  bg-gray-100 hover:bg-[#bb2460] hover:text-white whitespace-nowrap rounded-full"
             onClick={() => setShowDatePicker(!showDatePicker)}
           >
             <span>Select a date</span>
@@ -39,7 +39,7 @@ const DatePickerComponent = () => {
             </div>
           )}
         </div>
-        <button className="px-4 py-2 mx-1 rounded-md bg-gray-200 hover:bg-gray-300 whitespace-nowrap">Reset</button>
+        <button className="px-4 py-2 mx-1 rounded-full bg-gray-100 hover:bg-[#bb2460] hover:text-white whitespace-nowrap">Reset</button>
       </div>
     </div>
   );

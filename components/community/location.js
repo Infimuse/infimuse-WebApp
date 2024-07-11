@@ -25,8 +25,8 @@ export default function Location() {
           { value: 60, label: '60 km' },
         ]}
       />
-      <div className='text-black mb-2'>
-        Selected distance: {distance[0]} km - {distance[1]} km
+      <div className='text-black mt-[-18px] mb-4 text-center'>
+        {distance[0]} km - {distance[1]} km
       </div>
     </div>
   );
