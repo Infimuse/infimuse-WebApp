@@ -19,7 +19,7 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
             {slotsBooked} slots left
           </div>
           {/* Rating */}
-          <div className="absolute flex bottom-0 right-0  text-white font-bold  py-1 rounded-t px-3 text-sm m-2 ">
+          <div className="absolute flex bottom-0 right-0  text-white   py-1 rounded-t px-3 text-sm m-2 ">
             {ratingStars}
             <span className="ml-1">{rating} (5)</span>
           </div>

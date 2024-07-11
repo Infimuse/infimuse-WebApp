@@ -46,7 +46,7 @@ const Header = () => {
         <FaSearch className="h-6 cursor-pointer" />
           Communities
         </Link>
-        <Link href="/pricing" className="hidden md:inline cursor-pointer  p-2 rounded-md hover:bg-[#BB2460] hover:text-white text-black">Become a host</Link>
+        <Link href="/pricing" className="hidden md:inline cursor-pointer  p-2 rounded-full hover:bg-gray-100 hover:text-[#BB2460] text-black">Become a host</Link>
         {/* <FaGlobe className="h-6 cursor-pointer" /> */}
         <div className="relative">
           <div
