@@ -33,12 +33,13 @@ const categories = [
 ];
 
 
+
 const SubNavbar = () => {
   const [selectedCategories, setSelectedCategories] = useState(new Set());
   const [activeSubcategories, setActiveSubcategories] = useState(new Set());
   const containerRef = useRef(null);
 
-  const handleCategoryClick = (category: unknown) => {
+  const handleCategoryClick = (category) => {
     const newSelection = new Set(selectedCategories);
     if (newSelection.has(category)) {
       newSelection.delete(category);
@@ -48,7 +49,7 @@ const SubNavbar = () => {
     setSelectedCategories(newSelection);
   };
 
-  const handleSubcategoryClick = (subcategory: unknown) => {
+  const handleSubcategoryClick = (subcategory) => {
     const newActiveSubcategories = new Set(activeSubcategories);
     if (newActiveSubcategories.has(subcategory)) {
       newActiveSubcategories.delete(subcategory);
@@ -59,15 +60,11 @@ const SubNavbar = () => {
   };
 
   const scrollLeft = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -200, behavior: 'smooth' });
-    }
+    containerRef.current.scrollBy({ left: -200, behavior: 'smooth' });
   };
-
+  
   const scrollRight = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
-    }
+    containerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
   };
 
   const selectedSubcategories = Array.from(selectedCategories).flatMap(cat => categories.find(c => c.name === cat)?.subcategories || []);
@@ -79,7 +76,7 @@ const SubNavbar = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className={`relative flex flex-col items-center cursor-pointer transition duration-150 ease-in-out ${selectedCategories.has(category.name) ? 'text-[#BB2460]' : 'text-gray-500'}`}
+              className={`relative flex flex-col items-center cursor-pointer transition duration-150 ease-in-out ${selectedCategories.has(category.name) ? 'text-[#BB2460]' : 'text-gray-800'}`}
               onClick={() => handleCategoryClick(category.name)}
             >
               <span className="text-2xl mb-2">{category.icon}</span>
@@ -95,7 +92,7 @@ const SubNavbar = () => {
         </div>
         {selectedSubcategories.length > 0 && (
           <div className="mt-8">
-            <h2 className="text-2xl font-bold mb-4 ">Subcategories</h2>
+            <h2 className="text-2xl font-bold mb-4 ">SubCategories</h2>
             <div className="flex flex-wrap gap-2 mb-4">
               {selectedSubcategories.map(subcategory => (
                 <span

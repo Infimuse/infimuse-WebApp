@@ -33,12 +33,13 @@ const categories = [
 ];
 
 
+
 const SubNavbar = () => {
   const [selectedCategories, setSelectedCategories] = useState(new Set());
   const [activeSubcategories, setActiveSubcategories] = useState(new Set());
   const containerRef = useRef(null);
 
-  const handleCategoryClick = (category: unknown) => {
+  const handleCategoryClick = (category) => {
     const newSelection = new Set(selectedCategories);
     if (newSelection.has(category)) {
       newSelection.delete(category);
@@ -48,7 +49,7 @@ const SubNavbar = () => {
     setSelectedCategories(newSelection);
   };
 
-  const handleSubcategoryClick = (subcategory: unknown) => {
+  const handleSubcategoryClick = (subcategory) => {
     const newActiveSubcategories = new Set(activeSubcategories);
     if (newActiveSubcategories.has(subcategory)) {
       newActiveSubcategories.delete(subcategory);
@@ -59,15 +60,11 @@ const SubNavbar = () => {
   };
 
   const scrollLeft = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -200, behavior: 'smooth' });
-    }
+    containerRef.current.scrollBy({ left: -200, behavior: 'smooth' });
   };
-
+  
   const scrollRight = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
-    }
+    containerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
   };
 
   const selectedSubcategories = Array.from(selectedCategories).flatMap(cat => categories.find(c => c.name === cat)?.subcategories || []);
