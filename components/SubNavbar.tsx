@@ -83,7 +83,7 @@ const SubNavbar = () => {
               onClick={() => handleCategoryClick(category.name)}
             >
               <span className="text-2xl mb-2">{category.icon}</span>
-              <span className="text-sm font-medium">{category.name}</span>
+              <span className="text-sm font-medium text-black">{category.name}</span>
             </div>
           ))}
         </div>
