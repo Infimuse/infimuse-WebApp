@@ -35,7 +35,7 @@ export default function Location() {
           }
         }}
       />
-      <div className='text-black mt-[-18px] mb-4 text-center'>
+      <div className='text-black mt-[-18px] mb-12 text-center'>
         {distance[0]} km - {distance[1]} km
       </div>
     </div>
