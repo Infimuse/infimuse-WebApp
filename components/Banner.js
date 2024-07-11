@@ -40,8 +40,8 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden h-[420px]  rounded mb-4">
-      <div className="w-full h-100 sm:h-60 md:h-72 lg:h-80 overflow-hidden mx-auto max-w-screen-xl rounded-lg">
+    <div className="relative w-full overflow-hidden h-[420px]  rounded mb-4 ">
+      <div className="w-full h-100 sm:h-60 md:h-72 lg:h-80 overflow-hidden mx-auto max-w-screen-xl rounded-lg ">
         <Image
           src={banners[currentBanner].image}
           alt="Background"

@@ -14,12 +14,12 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
         <div className="relative w-full h-40">
           <Image src={image} alt={title} layout="fill" objectFit="cover" />
           {/* Slots Left */}
-          <div className="absolute bottom-0 left-0 bg-white bg-opacity-70  text-black  py-1 px-3 rounded-t  text-sm">
-            <FaUsers className="inline mr-1"/>
-            {slotsBooked} Slots Left
+          <div className="absolute bottom-0 left-0  bg-[#BB2460] font-bold text-white  py-1 px-3   m-2  rounded-2xl text-sm">
+            {/* <FaUsers className="inline mr-1"/> */}
+            {slotsBooked} slots left
           </div>
           {/* Rating */}
-          <div className="absolute flex bottom-0 right-0 bg-white bg-opacity-70 text-black  py-1 rounded-t px-3 text-sm  ">
+          <div className="absolute flex bottom-0 right-0  text-white font-bold  py-1 rounded-t px-3 text-sm m-2 ">
             {ratingStars}
             <span className="ml-1">{rating} (5)</span>
           </div>

@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react';
 import { FaFootballBall, FaBasketballBall, FaSwimmer, FaHiking, FaCampground, FaBook, FaPaintBrush, FaRobot, FaLaptopCode, FaMusic, FaDumbbell, FaTheaterMasks, FaCamera, FaLeaf, FaTshirt, FaArrowRight } from 'react-icons/fa';
 import { GiCookingPot, GiStairsGoal, GiMountainClimbing, GiChemicalDrop } from 'react-icons/gi';
 import { MdPsychology, MdHealthAndSafety, MdBiotech } from 'react-icons/md';
-import { IoIosArrowForward, IoIosArrowBack, IoIosClose } from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const categories = [
   { name: 'Sports', icon: <FaFootballBall className="text-green-500" />, subcategories: ['Football', 'Basketball', 'Tennis', 'Swimming'] },
@@ -48,11 +48,6 @@ const SubNavbar = () => {
     }
   };
 
-  const handleCategoryClose = () => {
-    setSelectedCategory(null);
-    setActiveCategory(null);
-  };
-
   const scrollRight = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
@@ -84,9 +79,7 @@ const SubNavbar = () => {
         </div>
         {selectedCategory && (
           <div className="mt-8">
-            <h2 className="text-2xl font-bold mb-4 flex justify-between ">Subcategories of {selectedCategory}
-            <IoIosClose className="text-2xl cursor-pointer border rounded-full bg-red-600" onClick={handleCategoryClose} />
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">Subcategories of {selectedCategory}</h2>
             <div className="flex flex-wrap gap-2 mb-4">
               {categories.find(cat => cat.name === selectedCategory)?.subcategories.map((subcategory) => (
                 <span
