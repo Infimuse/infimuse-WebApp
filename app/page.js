@@ -389,60 +389,29 @@ const HomePage = () => {
               <button className="text-black py-2 px-4 rounded-lg underline">View More</button>
             </Link>
           </div>
-          <div
-            ref={ExploreRef}
-            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
-          >
-            {experiences.slice(0, 16).map((experience) => (
-              <div key={experience.id}>
-                <Card {...experience} />
-              </div>
-            ))}
+          
+          <div className="space-y-4">
+            <div ref={ExploreRef} className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+              {experiences.slice(0, 8).map((experience) => (
+                <div key={experience.id}>
+                  <Card {...experience} />
+                </div>
+              ))}
+            </div>
+            <Arrow onClick={() => scrollToEnd(ExploreRef)} />
+            
+            <div ref={ExploreRef} className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar">
+              {experiences.slice(8, 16).map((experience) => (
+                <div key={experience.id}>
+                  <Card {...experience} />
+                </div>
+              ))}
+            </div>
+            <Arrow onClick={() => scrollToEnd(ExploreRef2)} />
           </div>
-          <Arrow onClick={() => scrollToEnd(ExploreRef)} />
         </section>
+
         
-
-
-
-        <section className="relative mb-8">
-          <div className="flex justify-between items-center mb-4">
-            <div>
-              <h2 className="text-2xl font-bold">Sipping Hangouts</h2>
-              <p className="text-gray-600">Discover great places to hang out and enjoy your favorite drinks.</p>
-            </div>
-            <Link href="/sipping-hangouts">
-              <button className="text-black py-2 px-4 rounded-lg underline">View More</button>
-            </Link>
-          </div>
-          <div
-            ref={sippingHangoutsRef}
-            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
-          >
-            {renderCards('Sipping Hangouts')}
-          </div>
-          <Arrow onClick={() => scrollToEnd(sippingHangoutsRef)} />
-        </section>
-
-        <section className="relative mb-8">
-          <div className="flex justify-between items-center mb-4 hide-scrollbar">
-            <div>
-              <h2 className="text-2xl font-bold">Kids Activities</h2>
-              <p className="text-gray-600">Fun and educational activities designed for kids of all ages.</p>
-            </div>
-            <Link href="/Kids-activities">
-              <button className="text-black py-2 px-4 rounded-lg underline">View More</button>
-            </Link>
-          </div>
-          <div
-            ref={kidsActivitiesRef}
-            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
-          >
-            {renderCards('Kids Activities')}
-          </div>
-          <Arrow onClick={() => scrollToEnd(kidsActivitiesRef)} />
-        </section>
-
         <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
@@ -462,7 +431,48 @@ const HomePage = () => {
           <Arrow onClick={() => scrollToEnd(workshopsRef)} />
         </section>
 
+
+        {/* <section className="relative mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <div>
+              <h2 className="text-2xl font-bold">Sipping Hangouts</h2>
+              <p className="text-gray-600">Discover great places to hang out and enjoy your favorite drinks.</p>
+            </div>
+            <Link href="/sipping-hangouts">
+              <button className="text-black py-2 px-4 rounded-lg underline">View More</button>
+            </Link>
+          </div>
+          <div
+            ref={sippingHangoutsRef}
+            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
+          >
+            {renderCards('Sipping Hangouts')}
+          </div>
+          <Arrow onClick={() => scrollToEnd(sippingHangoutsRef)} />
+        </section> */}
+
         <section className="relative mb-8">
+          <div className="flex justify-between items-center mb-4 hide-scrollbar">
+            <div>
+              <h2 className="text-2xl font-bold">For Kids </h2>
+              <p className="text-gray-600">Fun and educational activities designed for kids of all ages.</p>
+            </div>
+            <Link href="/Kids-activities">
+              <button className="text-black py-2 px-4 rounded-lg underline">View More</button>
+            </Link>
+          </div>
+          <div
+            ref={kidsActivitiesRef}
+            className="flex space-x-4 overflow-x-auto pb-4 hide-scrollbar"
+          >
+            {renderCards('Kids Activities')}
+          </div>
+          <Arrow onClick={() => scrollToEnd(kidsActivitiesRef)} />
+        </section>
+
+        
+
+        {/* <section className="relative mb-8">
           <div className="flex justify-between items-center mb-4">
             <div>
               <h2 className="text-2xl font-bold">Packages</h2>
@@ -479,9 +489,9 @@ const HomePage = () => {
             {renderCards('Packages')}
           </div>
           <Arrow onClick={() => scrollToEnd(packagesRef)} />
-        </section>
+        </section> */}
       </div>
-      <Download />
+      {/* <Download /> */}
       <Footer />
     </div>
   );

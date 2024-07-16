@@ -37,7 +37,7 @@ const BookingPage = () => {
               <h2 className="text-lg font-semibold text-gray-800">Log in or sign up to book</h2>
               <div className="mt-4">
                 <input type="text" placeholder="Phone number" className="form-input mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" />
-                <button className="mt-4 w-full bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600">Continue</button>
+                <button className="mt-4 w-full bg-pink-500 text-white py-2 px-4 rounded">Continue</button>
                 
                 <div className="flex justify-center space-x-4 mt-4">
                   <button className="p-2 border rounded text-blue-600 border-blue-600">Facebook</button>

@@ -34,12 +34,12 @@ const Card = ({ id, image, title, host, price, rating, slotsBooked }) => {
           <span>Nairobi Westlands</span>
         </div>
         
-        <div className="text-gray-500 flex items-center">
+        <div className="text-gray-500 flex text-sm items-center">
           <FaCalendarAlt className="inline mr-2" />
           <span>Sat, 26 Jun 06:00 PM</span>
         </div>
         
-        <div className="text-gray-500 flex items-center">
+        <div className="text-gray-500 flex text-sm items-center">
           <FaMoneyBillAlt className="inline mr-2"/> Ksh {price}
         </div>
 
