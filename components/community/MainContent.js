@@ -17,15 +17,15 @@ export default function ContainerPage() {
             </header> */}
             <div className="flex space-x-4 px-5 py-2 z-20 ">
                     {/* <img className="rounded-full h-11 w-11 mt-1" src="https://randomuser.me/api/portraits/women/57.jpg"/> */}
-                    {/* <TweetBox/> */}
+                    {/* <TweetBox/>  */}
                     <Categories/>
             </div>
 
-            <div className="flex  px-[150px] py-6 border-b mt-[-56px] ">
+            <div className="flex  py-6 border-b mt-[-56px] ">
                     <Location/>
             </div>
 
-            <div className='px-[300px]'>
+            <div className=''>
                     <Tweets/>
             </div>
         </div>

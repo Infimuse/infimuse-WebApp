@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react';
 import Sidebar from '@/components/community/Sidebar';
@@ -15,16 +15,16 @@ export default function HomePage() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white w-screen flex flex-col">
       <Navbar toggleSidebar={toggleSidebar} />
-      <div className="min-h-screen mx-auto flex bg-white">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-[300px,1fr,300px] gap-4">
         {/* Sidebar */}
-        <div className={`${sidebarOpen ? 'block' : 'hidden'} lg:block`}>
+        <div className={`bg-white ${sidebarOpen ? 'block' : 'hidden'} lg:block`}>
           <Sidebar />
         </div>
         
         {/* Main content */}
-        <main className="flex-1 flex flex-col border-r border-l border-b border-primary-container_border_color bg-white">
+        <main className="bg-white border-r border-l border-b border-primary-container_border_color">
           <MainContent />
         </main>
         
