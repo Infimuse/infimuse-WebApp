@@ -49,22 +49,7 @@ export default function SideBar() {
                   Discover Groups
                 </li>
               </div>
-              {isDayExperiencesOpen && (
-                <ul className="pl-12 mt-2">
-                  <li className="p-2 hover:bg-[#12B9f3] rounded-md">
-                    Enriching Activities
-                  </li>
-                  <li className="p-2 hover:bg-[#12B9f3] rounded-md">
-                    Learning Experiences
-                  </li>
-                  <li className="p-2 hover:bg-[#12B9f3] rounded-md">
-                    Sipping Hangouts
-                  </li>
-                  <li className="p-2 hover:bg-[#12B9f3] rounded-md">
-                    Kids Fun
-                  </li>
-                </ul>
-              )}
+              
             </div>
             <a href="">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
