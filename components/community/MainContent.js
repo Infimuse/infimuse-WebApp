@@ -18,7 +18,7 @@ export default function ContainerPage() {
             <div className="flex space-x-4 px-5 py-2 z-20 ">
                     {/* <img className="rounded-full h-11 w-11 mt-1" src="https://randomuser.me/api/portraits/women/57.jpg"/> */}
                     {/* <TweetBox/> */}
-                    {/* <Categories/> */}
+                    <Categories/>
             </div>
 
             <div className="flex  px-[150px] py-6 border-b mt-[-56px] ">
