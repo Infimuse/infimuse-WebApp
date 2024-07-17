@@ -1,17 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { MdHome } from "react-icons/md";
-import { BiHash } from "react-icons/bi";
-import { FaCalendarDays } from "react-icons/fa6";
+import { MdHome, MdOutlineSchool, MdMoreHoriz, MdPostAdd } from "react-icons/md";
+import { FaCalendarDays, FaUserPlus } from "react-icons/fa6";
 import { PiChalkboardTeacher } from "react-icons/pi";
-import { IoBookmarks } from "react-icons/io5";
 import { CiCircleList } from "react-icons/ci";
-import { FaUserPlus } from "react-icons/fa";
-import { MdOutlineSchool } from "react-icons/md";
+import { IoPeople } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
 
-import logo from "@/public/assets/logo.png";
+
 import Link from "next/link";
-import Image from "next/image";
 
 export default function SideBar() {
   const [isDayExperiencesOpen, setIsDayExperiencesOpen] = useState(false);
@@ -22,12 +19,12 @@ export default function SideBar() {
       <div>
         <nav className="mb-5">
           <ul>
-            <a href="/">
+            <Link href="/">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
                 <MdHome />
                 <li className="ml-4 sidebar-text-bold font-bold">Home</li>
               </div>
-            </a>
+            </Link>
             <div>
               <div
                 className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200 cursor-pointer"
@@ -36,25 +33,31 @@ export default function SideBar() {
                 <FaCalendarDays />
                 <li className="ml-4 sidebar-text font-regular">Discover Groups</li>
               </div>
+              {isDayExperiencesOpen && (
+                <ul className="pl-12 mt-2">
+                  <li className="p-2 hover:bg-[#12B9f3] rounded-md">Day Trip 1</li>
+                  <li className="p-2 hover:bg-[#12B9f3] rounded-md">Day Trip 2</li>
+                </ul>
+              )}
             </div>
-            <a href="">
+            <Link href="">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
                 <PiChalkboardTeacher />
                 <li className="ml-4 sidebar-text font-regular">Messages</li>
               </div>
-            </a>
-            <a href="">
+            </Link>
+            {/* <Link href="">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
-                <FaUserPlus />
+                <IoPeople />
                 <li className="ml-4 sidebar-text font-regular">My Communities</li>
               </div>
-            </a>
+            </Link> */}
             <div>
               <div
                 className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200 cursor-pointer"
                 onClick={() => setIsMyCommunitiesOpen(!isMyCommunitiesOpen)}
               >
-                <CiCircleList />
+                <IoPeople />
                 <li className="ml-4 sidebar-text font-regular">My Communities</li>
               </div>
               {isMyCommunitiesOpen && (
@@ -64,24 +67,24 @@ export default function SideBar() {
                 </ul>
               )}
             </div>
-            <a href="">
+            <Link href="">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
-                <MdOutlineSchool />
+                <CgProfile />
                 <li className="ml-4 sidebar-text font-regular">Profile</li>
               </div>
-            </a>
-            <a href="">
+            </Link>
+            <Link href="">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
-                <MdOutlineSchool />
+                <MdMoreHoriz />
                 <li className="ml-4 sidebar-text font-regular">More</li>
               </div>
-            </a>
-            <a href="">
+            </Link>
+            <Link href="">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
-                <MdOutlineSchool />
+                <MdPostAdd />
                 <li className="ml-4 sidebar-text font-regular">Post</li>
               </div>
-            </a>
+            </Link>
           </ul>
         </nav>
         <button className="bg-[#12B9f3] text-white rounded-full shadow-lg py-3 px-8 w-90 transform transition-colors duration-500 hover:bg-primary-button_hover font-bold sidebar-text-bold">
