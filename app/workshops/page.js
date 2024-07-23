@@ -36,7 +36,7 @@ const Workshops = () => {
         <Datepicker />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8 text-black">
         <h2 className="text-2xl font-bold mb-4">Workshops</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-28">
           {renderCards('Workshops')}
         </div>
         <div className="flex justify-center mt-8">

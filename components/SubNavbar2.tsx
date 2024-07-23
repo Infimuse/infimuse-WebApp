@@ -8,7 +8,7 @@ const categories = [
   { name: 'Experiences', path: '/activities' },
   { name: 'Activities', path: '/learning-experiences' },
   { name: 'Hangouts', path: '/sipping-hangouts' },
-  { name: 'Kids Activities', path: '/Kids-activities' },
+  { name: 'For Kids ', path: '/Kids-activities' },
   { name: 'Workshops', path: '/workshops' },
   // { name: 'Packages', path: '/packages' }
 ];
