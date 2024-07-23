@@ -43,7 +43,7 @@ export default function AllBox() {
                 </div>
             </div>
             
-            <div className="hover:bg-primary-trends_hover transform transition-colors duration-2 cursor-pointer mb-3">
+            /<div className="hover:bg-primary-trends_hover transform transition-colors duration-2 cursor-pointer mb-3">
                 <div className="">
                     <div className="flex flex-row items-center category_1">
                         <span className="text-sm text-primary-trends_d_color">Football . Trending</span>
@@ -83,7 +83,7 @@ export default function AllBox() {
                 <div className="TopicCount">
                     <span className="text-primary-trends_d_color">1.485 Tweets</span>
                 </div>
-            </div> */}
+            </div>
 
             {/* ////////////////////////////////////////////////////////////////////////////////////////////////// */}
 

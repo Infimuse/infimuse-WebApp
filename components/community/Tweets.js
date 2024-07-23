@@ -30,19 +30,19 @@ export default function Tweets() {
                                 <img className="mt-3 rounded-xl" src={tweet.image} alt="" height={420} width={420} />
                             </p>
                             <ul className="flex  mt-2">
-                                <li className="flex items-center space-x-3 text-primary-gray_colors text-sm">
+                                <li className="flex items-center  text-primary-gray_colors text-sm mr-3">
                                     <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-200 cursor-pointer hover:bg-primary-tweets_hover_colors3">
                                         <FaHeart />
                                     </div>
                                     <span>{tweet.likes}</span>
                                 </li>
-                                <li className="flex items-center space-x-3 text-primary-gray_colors text-sm">
+                                <li className="flex items-center text-primary-gray_colors text-sm mr-3">
                                     <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-200 cursor-pointer hover:bg-primary-tweets_hover_colors1">
                                         <FaComment />
                                     </div>
                                     <span>{tweet.replies}</span>
                                 </li>
-                                <li className="flex items-center space-x-3 text-primary-gray_colors text-sm">
+                                <li className="flex items-center  text-primary-gray_colors text-sm">
                                     <div className="flex items-center justify-center w-9 h-9  rounded-full transform transition-colors duration-200 cursor-pointer hover:bg-primary-tweets_hover_colors1">
                                         <FaTelegramPlane  />
                                     </div>

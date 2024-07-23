@@ -42,11 +42,11 @@ const Header = () => {
 
       {/* Right */}
       <div className="flex items-center justify-end space-x-4 text-gray-500">
-        {/* <Link href="/communities" class=" flex gap-1 bg-rainbow-gradient p-2 cursor-pointer rounded-full text-white font-semibold">
+        <Link href="/communities" class=" flex gap-1 bg-rainbow-gradient p-2 cursor-pointer rounded-full text-white font-semibold">
         <FaSearch className="h-6 cursor-pointer" />
           Communities
-        </Link> */}
-        <Link href="/pricing" className="hidden md:inline cursor-pointer  p-2 rounded-full hover:bg-gray-100 hover:text-[#BB2460] text-black">Become a host</Link>
+        </Link>
+        <Link href="/pricing" className="hidden md:inline cursor-pointer  p-2 rounded-full bg-[#12B9f3]   text-white">Become a host</Link>
         {/* <FaGlobe className="h-6 cursor-pointer" /> */}
         <div className="relative">
           <div

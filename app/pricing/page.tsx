@@ -1,7 +1,7 @@
 import React from 'react'
 import Pricing from '@/components/pricing'
 import Download from '@/components/Download'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/PricingNav'
 import Footer from '@/components/Footer'
 
 function page() {
