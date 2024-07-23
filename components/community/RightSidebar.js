@@ -10,8 +10,14 @@ export default function AllBox() {
         </div>
         <div className="items-center p-3 m-3 mt-4 bg-primary-trends_fy_color rounded-xl">
             <div>
-                <div className="tfy flex items-center justify-between text-black border-gray-500 rounded border mb-10">
-                    <span className="text-xl font-bold">My Communities</span>
+                <div className="p-2 flex items-center justify-between text-black border-gray-500 rounded border mb-10">
+                    <span className="text-lg font-bold ">My Communities</span>
+                    <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 hover:bg-gray-700 hover:bg-opacity-70 cursor-pointer">
+                    <SettingsIcon/>
+                    </div>
+                </div>
+                <div className="p-2 flex items-center justify-between text-black border-gray-500 rounded border mb-10">
+                    <span className="text-lg font-bold ">Host Communities</span>
                     <div className="flex items-center justify-center w-9 h-9 rounded-full transform transition-colors duration-2 hover:bg-gray-700 hover:bg-opacity-70 cursor-pointer">
                     <SettingsIcon/>
                     </div>
@@ -81,10 +87,10 @@ export default function AllBox() {
 
             {/* ////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-            <div className="rounded border border-gray-500 cursor-pointer">
+            {/* <div className="rounded border border-gray-500 cursor-pointer">
                 <div className="">
                     <div className="flex flex-row items-center category_1">
-                        <span className="text-xl font-bold text-black p-2">Host Communities</span>
+                        <span className="text-lg font-bold text-black p-2">Host Communities</span>
                         <div className="flex space-x-1 ml-auto tt items-center justify-center w-8 h-8 rounded-full transform transition-colors duration-2 hover:bg-primary-trends_circle_hover hover:bg-opacity-25 cursor-pointer">
                             <Circle/>
                         </div>
@@ -99,8 +105,8 @@ export default function AllBox() {
                 </div>
                 <div className="TopicCount">
                     <span className="text-primary-trends_d_color">30K Tweets</span>
-                </div> */}
-            </div>
+                </div> 
+            </div> */}
             <div className="p-4 transform transition-colors duration-2 bg-primary-wigdets_background_color">
             {/* <span className=" text-primary-button">Show more</span> */}
         </div>

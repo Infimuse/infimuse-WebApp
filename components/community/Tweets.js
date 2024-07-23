@@ -16,13 +16,14 @@ export default function Tweets() {
             ].map(tweet => (
                 <div key={tweet.id} className="flex space-x-3 px-4 py-3 border-b border-primary-container_border_color">
                     <img src={tweet.portrait} className="w-11 h-11 rounded-full" alt="" />
-                    <div className="flex-1">
+                    <div className="flex-1 ml-[120px]">
                         <div className="flex items-center text-sm space-x-2">
                             <span className="ml-1 font-bold text-black">{tweet.name}</span>
                             <span className="ml-2 text-black">{tweet.username}</span>
                             <div className="mx-2 text-black">·</div>
                             <span className="text-black">{tweet.time}</span>
                         </div>
+                        
                         <div className="ml-1">
                             <p className="items-center text-black overflow-hidden">
                                 {tweet.text}

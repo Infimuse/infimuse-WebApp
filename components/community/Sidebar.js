@@ -31,14 +31,12 @@ export default function SideBar() {
                 onClick={() => setIsDayExperiencesOpen(!isDayExperiencesOpen)}
               >
                 <FaCalendarDays />
-                <li className="ml-4 sidebar-text font-regular">Discover Groups</li>
+                <li className="ml-4 sidebar-text font-regular">
+                <Link href="/Explore">
+                  Discover Groups
+                </Link>
+                </li>
               </div>
-              {isDayExperiencesOpen && (
-                <ul className="pl-12 mt-2">
-                  <li className="p-2 hover:bg-[#12B9f3] rounded-md">Day Trip 1</li>
-                  <li className="p-2 hover:bg-[#12B9f3] rounded-md">Day Trip 2</li>
-                </ul>
-              )}
             </div>
             <Link href="">
               <div className="flex items-center hover:bg-primary-navi_hover hover:bg-opacity-70 rounded-full pl-3 pr-8 py-3 transform transition-colors duration-200">
