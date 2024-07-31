@@ -30,7 +30,7 @@ export default function ContainerPage() {
                     <Location/>
             </div>
 
-            <div className='ml-[120px] '>
+            <div className='ml-[180px] '>
                     <Tweets/>
             </div>
         </div>
