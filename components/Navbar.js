@@ -14,7 +14,16 @@ const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Track authentication status
   const dropdownRef = useRef(null);
+
+  // Check authentication status on component mount
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
   // Click outside handler
   useEffect(() => {
@@ -26,6 +35,12 @@ const Header = () => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [dropdownRef]);
+
+  const handleSignOut = () => {
+    localStorage.removeItem('authToken');
+    setIsAuthenticated(false);
+    // Add any additional sign-out logic here (e.g., redirect to home page)
+  };
 
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-20">
@@ -42,11 +57,11 @@ const Header = () => {
 
       {/* Right */}
       <div className="flex items-center justify-end space-x-4 text-gray-500">
-        <Link href="/communities" class=" flex gap-1 bg-rainbow-gradient p-2 cursor-pointer rounded-full text-white font-semibold">
-        <FaSearch className="h-6 cursor-pointer" />
+        <Link href="/communities" className="flex gap-1 bg-rainbow-gradient p-2 cursor-pointer rounded-full text-white font-semibold">
+          <FaSearch className="h-6 cursor-pointer" />
           Communities
         </Link>
-        <Link href="/pricing" className="hidden md:inline cursor-pointer  p-2 rounded-full hover:bg-gray-100 hover:text-[#BB2460] text-black">Become a host</Link>
+        <Link href="/pricing" className="hidden md:inline cursor-pointer p-2 rounded-full hover:bg-gray-100 hover:text-[#BB2460] text-black">Become a host</Link>
         {/* <FaGlobe className="h-6 cursor-pointer" /> */}
         <div className="relative">
           <div
@@ -58,24 +73,35 @@ const Header = () => {
           </div>
           {showDropdown && (
             <div ref={dropdownRef} className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
-              <button
-                onClick={() => {
-                  setShowDropdown(false);
-                  setShowSignIn(true);
-                }}
-                className="text-left w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Sign In
-              </button>
-              <button
-                onClick={() => {
-                  setShowDropdown(false);
-                  setShowSignUp(true);
-                }}
-                className="text-left w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Sign Up
-              </button>
+              {isAuthenticated ? (
+                <button
+                  onClick={handleSignOut}
+                  className="text-left w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Sign Out
+                </button>
+              ) : (
+                <>
+                  <button
+                    onClick={() => {
+                      setShowDropdown(false);
+                      setShowSignIn(true);
+                    }}
+                    className="text-left w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Sign In
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowDropdown(false);
+                      setShowSignUp(true);
+                    }}
+                    className="text-left w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Sign Up
+                  </button>
+                </>
+              )}
             </div>
           )}
         </div>

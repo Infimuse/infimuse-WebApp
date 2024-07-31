@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
-import { toast, Toaster } from 'react-hot-toast';
+import SignUp from './SignUp'; // Import the SignUp component
 
 function SignIn({ onClose }) {
   const [email, setEmail] = useState('');
@@ -24,15 +24,15 @@ function SignIn({ onClose }) {
       const data = await response.json();
 
       if (response.ok) {
-        toast.success('Login successful!');
+        console.log('Login successful', data);
         // Handle successful login (e.g., redirect, show success message, etc.)
         onClose();
       } else {
-        toast.error('Login failed: ' + data.message);
+        console.error('Login failed', data);
         // Handle login failure (e.g., show error message)
       }
     } catch (error) {
-      toast.error('An error occurred: ' + error.message);
+      console.error('An error occurred', error);
       // Handle network or other errors
     } finally {
       setLoading(false);
@@ -55,7 +55,6 @@ function SignIn({ onClose }) {
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
       onClick={handleClickOutside}
     >
-      <Toaster />
       <div className="bg-white p-8 rounded-lg text-black shadow-lg w-full max-w-md relative">
         <h2 className="text-2xl font-bold mb-4">Sign In</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
