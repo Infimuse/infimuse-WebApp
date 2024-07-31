@@ -87,7 +87,7 @@ function SignIn({ onClose }) {
           </button>
         </form>
         <p className="mt-4 text-center">
-          Don't have an account?{' '}
+          Dont have an account?{' '}
           <span className="text-[#12B9f3] cursor-pointer" onClick={() => setIsSignUp(true)}>
             Sign Up
           </span>
