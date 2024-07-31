@@ -101,9 +101,7 @@ export default function ExperienceDetail({ params }) {
               Book Now
             </button>
           </a>
-            <button className="w-full bg-gray-100 text-gray-700 font-semibold py-3 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 mb-4">
-              <GiftIcon className="inline h-5 w-5 mr-2" /> Give as a Gift
-            </button>
+           
             <button className="w-full bg-gray-100 text-gray-700 font-semibold py-3 rounded-lg shadow-md hover:bg-gray-200 transition duration-300 mb-4">
               <BookmarkIcon className="inline h-5 w-5 mr-2" /> Save to Wishlist
             </button>
@@ -118,7 +116,7 @@ export default function ExperienceDetail({ params }) {
               <li>All levels</li>
               <li>Age Limit: {experience.ageLimit}</li>
               <li>Earn 10% Rewards</li>
-              <li>Price Lock</li>
+              <li>Price Lock</li> 
             </ul>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
@@ -140,24 +138,7 @@ export default function ExperienceDetail({ params }) {
           <div className="relative w-full h-64 mb-8">
             <Image src={experience.mapImage} alt="Map" layout="fill" objectFit="cover" className="rounded-lg shadow-lg" />
           </div>
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-8 flex flex-col items-center">
-            <h1 className=' font-bold mb-4'>Meet the Host</h1>
-            <Image
-              src={experience.profilePicture} // Replace with the actual image URL
-              alt={experience.host}
-              width={100}
-              height={100}
-              className="rounded-full mb-4"
-            />
-            <h2 className="text-2xl font-bold mb-2">{experience.host}</h2>
-            <p className="text-sm text-gray-500 mb-2">Started hosting in {experience.hostType}</p>
-            <a href="/Host" className="w-full">
-              <button className="w-full bg-[#12B9f3] text-white font-semibold py-2 px-4 rounded-lg shadow-md  transition duration-300 mt-4">
-                See profile
-              </button>
-            </a>
-            
-          </div>
+          
           <div className="bg-white rounded-lg shadow-lg p-6 mb-8 flex flex-col items-center">
             <h1 className=' font-bold mb-4'>Meet the Instructor</h1>
             <Image

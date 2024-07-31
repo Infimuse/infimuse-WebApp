@@ -1,8 +1,19 @@
-import React from 'react';
+ "use client"
+
+import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const BookingPage = () => {
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (user) {
+      setIsSignedIn(true);
+    }
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -59,48 +70,33 @@ const BookingPage = () => {
               </div>
               {/* Left Column for Booking Details */}
               <div>
-                <div className="border rounded-xl mb-10 border-gray-300 p-4">
-                  <h2 className="text-lg font-semibold text-gray-800">Your Booking Details</h2>
-                  <p className="text-sm text-gray-500">Claudia s place is usually booked. This is a rare find.</p>
-                </div>
-
-                <div className="mb-8">
-                  <h2 className="text-lg font-semibold text-gray-800">Your Day Experience</h2>
-                  <div className="mt-4">
-                    <div className="flex justify-between">
-                      <div><p className="text-xl font-bold text-gray-600">Introduction To Guitar</p></div>
-                      <div><p className="text-sm text-gray-800">Aug 11 – 16</p></div>
-                    </div>
-                    <div className="flex justify-between">
-                      <div><p className="font-bold text-gray-600">Venue</p></div>
-                      <div><p className="text-sm text-gray-800">Westlands Street</p></div>
+                {isSignedIn ? (
+                  <div className="border rounded-xl mb-10 border-gray-300 p-4">
+                    <h2 className="text-lg font-semibold text-gray-800">Your Booking Details</h2>
+                    <p className="text-sm text-gray-500">Claudia's place is usually booked. This is a rare find.</p>
+                  </div>
+                ) : (
+                  <div className="mb-8">
+                    <h2 className="text-lg font-semibold text-gray-800">Log in or sign up to book</h2>
+                    <div className="mt-4">
+                      <input type="text" placeholder="Phone number" className="form-input mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" />
+                      <button className="mt-4 w-full bg-pink-500 text-white py-2 px-4 rounded">Continue</button>
+                      
+                      <div className="flex justify-center space-x-4 mt-4">
+                        <button className="p-2 border rounded text-blue-600 border-blue-600">Facebook</button>
+                        <button className="p-2 border rounded text-red-600 border-red-600">Google</button>
+                        <button className="p-2 border rounded text-gray-800 border-gray-800">Apple</button>
+                      </div>
+                      <button className="mt-4 w-full border-gray-500 text-gray-800 border py-2 px-4 rounded hover:bg-pink-600">Continue with Email</button>
                     </div>
                   </div>
-                </div>
-
-                <div className="mb-8">
-                  <h2 className="text-lg font-semibold text-gray-800">Log in or sign up to book</h2>
-                  <div className="mt-4">
-                    <input type="text" placeholder="Phone number" className="form-input mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" />
-                    <button className="mt-4 w-full bg-pink-500 text-white py-2 px-4 rounded">Continue</button>
-                    
-                    <div className="flex justify-center space-x-4 mt-4">
-                      <button className="p-2 border rounded text-blue-600 border-blue-600">Facebook</button>
-                      <button className="p-2 border rounded text-red-600 border-red-600">Google</button>
-                      <button className="p-2 border rounded text-gray-800 border-gray-800">Apple</button>
-                    </div>
-                    <button className="mt-4 w-full border-gray-500 text-gray-800 border py-2 px-4 rounded hover:bg-pink-600">Continue with Email</button>
-                  </div>
-                </div>
+                )}
               </div>
-
-              
             </div>
           </div>
         </div>
       </div>
-      <Footer/>
-
+      <Footer />
     </>
   );
 };
