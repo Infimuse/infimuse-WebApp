@@ -73,7 +73,7 @@ const BookingPage = () => {
                 {isSignedIn ? (
                   <div className="border rounded-xl mb-10 border-gray-300 p-4">
                     <h2 className="text-lg font-semibold text-gray-800">Your Booking Details</h2>
-                    <p className="text-sm text-gray-500">Claudia's place is usually booked. This is a rare find.</p>
+                    <p className="text-sm text-gray-500">Claudias place is usually booked. This is a rare find.</p>
                   </div>
                 ) : (
                   <div className="mb-8">
