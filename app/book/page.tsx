@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const BookingPage = () => {
   return (
@@ -98,6 +99,8 @@ const BookingPage = () => {
           </div>
         </div>
       </div>
+      <Footer/>
+
     </>
   );
 };

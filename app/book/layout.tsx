@@ -25,7 +25,6 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
       </Head>
       <body className={inter.className}>{children}</body>
-      <Footer/>
     </html>
   );
 }
